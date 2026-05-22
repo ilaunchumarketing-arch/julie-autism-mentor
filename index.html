@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Julie Fonseca — Mentora de Padres con Hijos en el Espectro Autista | Autism Parent Mentor</title>
+<meta name="description" content="Julie Fonseca ayudó a sus propias dos hijas con autismo. Hoy ayuda a familias como la tuya. Agenda tu consulta gratuita." />
+<meta name="theme-color" content="#4A7C59" />
+
+<meta property="og:title" content="Julie Fonseca — Autism Parent Mentor" />
+<meta property="og:description" content="Una mentora que entiende. Una madre que lo vivió. Un método que funciona." />
+<meta property="og:image" content="/public/images/hero_image.jpg" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --sage: #4A7C59;
+    --sage-dark: #3a6347;
+    --sage-light: #6b9678;
+    --terracotta: #C17B54;
+    --terracotta-dark: #a86640;
+    --cream: #FAF7F2;
+    --cream-warm: #f3eee4;
+    --charcoal: #2C2C2C;
+    --charcoal-soft: #4a4a4a;
+    --white: #FFFFFF;
+    --shadow-sm: 0 2px 8px rgba(44, 44, 44, 0.06);
+    --shadow-md: 0 8px 24px rgba(44, 44, 44, 0.08);
+    --shadow-lg: 0 16px 40px rgba(44, 44, 44, 0.12);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--charcoal);
+    background: var(--cream);
+    line-height: 1.6;
+    font-size: 17px;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--charcoal);
+    letter-spacing: -0.01em;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ───────────── NAV ───────────── */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 18px 0;
+    background: rgba(250, 247, 242, 0.0);
+    transition: background 0.35s var(--ease), padding 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  }
+  .nav.scrolled {
+    background: rgba(250, 247, 242, 0.96);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    box-shadow: var(--shadow-sm);
+    padding: 12px 0;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--white);
+    transition: color 0.35s var(--ease);
+    letter-spacing: -0.01em;
+  }
+  .brand .tag {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-top: 2px;
+  }
+  .nav.scrolled .brand { color: var(--sage-dark); }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    transition: transform 0.25s var(--ease), background 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
+  .nav-cta:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .lang-toggle {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.25s var(--ease);
+    font-family: inherit;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
+  .nav.scrolled .lang-toggle {
+    background: rgba(74, 124, 89, 0.08);
+    color: var(--sage-dark);
+    border-color: rgba(74, 124, 89, 0.25);
+  }
+  .nav.scrolled .lang-toggle:hover { background: rgba(74, 124, 89, 0.16); }
+
+  /* ───────────── HERO ───────────── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(44,44,44,0.55) 0%, rgba(44,44,44,0.35) 40%, rgba(44,44,44,0.78) 100%),
+      linear-gradient(90deg, rgba(44,44,44,0.45) 0%, rgba(44,44,44,0.15) 60%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 110px 0 60px;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(193, 123, 84, 0.95);
+    color: var(--white);
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    color: var(--white);
+    font-size: clamp(2rem, 4.4vw, 3.6rem);
+    font-weight: 800;
+    max-width: 980px;
+    margin-bottom: 16px;
+    text-wrap: balance;
+    line-height: 1.08;
+  }
+  .hero-subline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    color: rgba(255,255,255,0.92);
+    max-width: 720px;
+    margin-bottom: 14px;
+    font-weight: 400;
+  }
+  .hero-subtext {
+    font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+    color: rgba(255,255,255,0.88);
+    max-width: 620px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  .hero-subtext .en {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.92em;
+    opacity: 0.78;
+    font-style: italic;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 18px 36px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: transform 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    box-shadow: 0 10px 30px rgba(193, 123, 84, 0.35);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 38px rgba(193, 123, 84, 0.45);
+  }
+  .btn .arrow { transition: transform 0.3s var(--ease); }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.6);
+    box-shadow: none;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: var(--white);
+  }
+
+  .btn-en {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    opacity: 0.75;
+    text-transform: none;
+    margin-top: 3px;
+    font-style: italic;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+  .hero-trust {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+  }
+  .hero-trust .stars { color: #f4c95d; font-size: 16px; letter-spacing: 2px; }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    z-index: 3;
+    animation: floatDown 2.4s ease-in-out infinite;
+  }
+  @keyframes floatDown {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+  }
+
+  /* ───────────── SECTIONS ───────────── */
+  section { position: relative; }
+
+  .section {
+    padding: 100px 0;
+  }
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--terracotta);
+    margin-bottom: 18px;
+  }
+  .section-title {
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    margin-bottom: 16px;
+    text-wrap: balance;
+  }
+  .section-title .en {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.55em;
+    font-weight: 400;
+    color: var(--sage);
+    margin-top: 10px;
+    letter-spacing: 0.005em;
+  }
+  .section-intro {
+    max-width: 680px;
+    font-size: 18px;
+    color: var(--charcoal-soft);
+    line-height: 1.7;
+  }
+  .section-intro .en {
+    display: block;
+    margin-top: 14px;
+    font-style: italic;
+    color: #777;
+    font-size: 0.92em;
+  }
+  .center { text-align: center; }
+  .center .section-intro { margin-left: auto; margin-right: auto; }
+
+  /* ───────────── ABOUT ───────────── */
+  .about {
+    background: var(--cream);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-text p {
+    color: var(--charcoal-soft);
+    margin-bottom: 18px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .about-text p.en {
+    font-style: italic;
+    color: #888;
+    font-size: 15.5px;
+    padding-left: 18px;
+    border-left: 2px solid var(--terracotta);
+  }
+  .about-sig {
+    margin-top: 28px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--sage-dark);
+  }
+  .about-sig small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  .about-image-wrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .about-image-wrap img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+  .about-image-wrap::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--terracotta);
+    border-radius: var(--radius);
+    z-index: -1;
+    opacity: 0.4;
+  }
+  .about-stats {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(74, 124, 89, 0.2);
+  }
+  .about-stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--sage-dark);
+    line-height: 1;
+  }
+  .about-stat .lbl {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  /* ───────────── PROBLEM ───────────── */
+  .problem {
+    background: var(--cream-warm);
+  }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+  .problem-card {
+    background: var(--white);
+    padding: 36px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--terracotta);
+    position: relative;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+  .problem-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+  .problem-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--terracotta);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .problem-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+  .problem-card p.en {
+    font-style: italic;
+    color: #888;
+    font-size: 14.5px;
+    margin-top: 8px;
+  }
+
+  /* ───────────── METHOD ───────────── */
+  .method {
+    background: var(--white);
+    padding: 110px 0;
+    position: relative;
+  }
+  .method::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 10% 20%, rgba(74,124,89,0.04) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(193,123,84,0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .method .container { position: relative; z-index: 1; }
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+  }
+  .pillar {
+    display: flex;
+    gap: 24px;
+    padding: 32px;
+    border-radius: var(--radius);
+    background: var(--cream);
+    transition: transform 0.4s var(--ease), background 0.4s var(--ease);
+  }
+  .pillar:hover {
+    background: var(--cream-warm);
+    transform: translateY(-4px);
+  }
+  .pillar-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    box-shadow: 0 6px 18px rgba(74,124,89,0.3);
+  }
+  .pillar-icon svg { width: 28px; height: 28px; stroke-width: 2; }
+  .pillar h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+  .pillar p {
+    color: var(--charcoal-soft);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .pillar p.en {
+    margin-top: 8px;
+    font-style: italic;
+    color: #999;
+    font-size: 14px;
+  }
+
+  /* ───────────── PROOF / TESTIMONIALS ───────────── */
+  .proof {
+    background: var(--cream);
+    padding: 110px 0;
+  }
+  .proof-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .testimonial {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--sage);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+  .testimonial:hover {
+    transform: translateX(6px);
+    box-shadow: var(--shadow-md);
+  }
+  .testimonial-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .testimonial-label .stars { color: #f4c95d; letter-spacing: 1.5px; }
+  .testimonial p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--charcoal);
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .testimonial cite {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--charcoal-soft);
+    font-weight: 600;
+  }
+  .testimonial cite::before {
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background: var(--terracotta);
+  }
+  .results-image {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .results-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+  .results-image::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 60%;
+    height: 60%;
+    border: 3px solid var(--sage);
+    border-radius: var(--radius);
+    z-index: -1;
+    opacity: 0.4;
+  }
+  .results-quote {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: rgba(250, 247, 242, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 20px 22px;
+    border-radius: 12px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .results-quote strong {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  /* ───────────── SERVICES ───────────── */
+  .services {
+    background: var(--white);
+    padding: 110px 0;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+  .service-card {
+    background: var(--cream);
+    padding: 40px 32px;
+    border-radius: var(--radius);
+    border-top: 4px solid var(--sage);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card:nth-child(2) { border-top-color: var(--terracotta); }
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  .service-tag {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .service-card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .service-card .en-sub {
+    font-style: italic;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  .service-card ul {
+    list-style: none;
+    margin: 8px 0 24px;
+    color: var(--charcoal-soft);
+    font-size: 15px;
+  }
+  .service-card li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .service-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 14px;
+    height: 1.5px;
+    background: var(--sage);
+  }
+  .service-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--sage-dark);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: gap 0.3s var(--ease);
+  }
+  .service-link:hover { gap: 14px; }
+
+  /* ───────────── CTA SECTION ───────────── */
+  .cta-section {
+    background: linear-gradient(135deg, #2c3e34 0%, #1f2c25 100%);
+    color: var(--white);
+    padding: 110px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(193,123,84,0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(74,124,89,0.2) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  .cta-section .container { position: relative; z-index: 1; }
+  .cta-eyebrow {
+    color: var(--terracotta);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: block;
+  }
+  .cta-section h2 {
+    color: var(--white);
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    margin-bottom: 18px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-section p {
+    font-size: 19px;
+    color: rgba(255,255,255,0.82);
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .cta-section p .en {
+    display: block;
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 8px;
+    color: rgba(255,255,255,0.6);
+  }
+  .cta-bullets {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    margin-top: 38px;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+  }
+  .cta-bullets span { display: flex; align-items: center; gap: 8px; }
+  .cta-bullets svg { color: var(--terracotta); }
+
+  /* ───────────── FOOTER ───────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.7);
+    padding: 60px 0 30px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .footer-tag {
+    color: var(--terracotta);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .footer-contact {
+    margin-bottom: 24px;
+  }
+  .footer-contact a {
+    color: rgba(255,255,255,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.25s var(--ease);
+    padding-bottom: 2px;
+  }
+  .footer-contact a:hover { border-color: var(--terracotta); }
+  .footer-divider {
+    width: 60px;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 28px auto;
+  }
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ───────────── FADE-IN ANIMATIONS ───────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .reveal:nth-child(3) { transition-delay: 0.16s; }
+
+  /* ───────────── EN TOGGLE ───────────── */
+  body.en-only [data-es] { display: none !important; }
+  body.es-only [data-en] { display: none !important; }
+
+  /* ───────────── RESPONSIVE ───────────── */
+  @media (max-width: 960px) {
+    .about-grid,
+    .proof-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+    .problem-grid,
+    .services-grid,
+    .method-grid {
+      grid-template-columns: 1fr;
+    }
+    .section { padding: 70px 0; }
+    .method, .proof, .services, .cta-section { padding: 80px 0; }
+    .about-image-wrap img,
+    .results-image img { aspect-ratio: 4 / 4; }
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .container { padding: 0 20px; }
+    .hero-inner { padding: 130px 0 100px; }
+    .nav-cta { padding: 9px 16px; font-size: 13px; }
+    .nav-cta .nav-cta-label { display: none; }
+    .nav-cta .nav-cta-short { display: inline; }
+    .brand { font-size: 18px; }
+    .brand .tag { font-size: 9.5px; }
+    .btn { padding: 16px 28px; font-size: 14px; }
+    .pillar { flex-direction: column; gap: 16px; padding: 28px 24px; }
+    .about-stats { grid-template-columns: 1fr; gap: 18px; text-align: left; }
+    .results-quote { position: static; margin-top: -40px; margin-left: 16px; margin-right: 16px; }
+    .results-image { overflow: visible; }
+    .cta-bullets { gap: 16px; flex-direction: column; align-items: center; }
+  }
+
+  .nav-cta .nav-cta-short { display: none; }
+</style>
+</head>
+<body>
+
+<!-- ─────────── NAV ─────────── -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      Julie Fonseca
+      <span class="tag" data-es="Mentora de Autismo" data-en="Autism Parent Mentor">Mentora de Autismo</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
+      <a href="#contact" class="nav-cta">
+        <span class="nav-cta-label" data-es="Consulta Gratuita" data-en="Free Call">Consulta Gratuita</span>
+        <span class="nav-cta-short">→</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─────────── HERO ─────────── -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <img src="public/images/hero_image.jpg" alt="Julie Fonseca trabajando con un niño en el espectro autista" />
+  </div>
+  <div class="container hero-inner">
+    <span class="hero-eyebrow reveal" data-es="Mentora de Padres • Autismo" data-en="Parent Mentor • Autism">Mentora de Padres • Autismo</span>
+    <h1 class="reveal" data-es="¿Tu hijo tiene autismo y sientes que nadie te entiende?" data-en="Is your child on the spectrum — and do you feel completely alone?">¿Tu hijo tiene autismo y sientes que nadie te entiende?</h1>
+    <p class="hero-subline reveal" data-es="No estás solo/a — y existe un camino real hacia adelante." data-en="You are not alone — and there is a proven path forward.">You are not alone — and there is a proven path forward.</p>
+    <p class="hero-subtext reveal">
+      <span data-es="Julie Fonseca ayudó a sus propias dos hijas con autismo. Hoy ayuda a familias como la tuya a encontrar el camino — paso a paso, con compasión y un método que funciona." data-en="Julie Fonseca helped her own two daughters with autism. Today she helps families like yours find their way forward — step by step, with compassion and a method that works.">Julie Fonseca ayudó a sus propias dos hijas con autismo. Hoy ayuda a familias como la tuya a encontrar el camino — paso a paso, con compasión y un método que funciona.</span>
+      <span class="en" data-es-only>Julie helped her own two daughters with autism. Today she helps families like yours find their way forward.</span>
+    </p>
+    <div class="hero-cta-row reveal">
+      <a href="#contact" class="btn">
+        <span>
+          <span data-es="Agenda tu Consulta Gratuita" data-en="Book Your Free Call">Agenda tu Consulta Gratuita</span>
+          <span class="btn-en" data-es-only>Book Your Free Call</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#method" class="btn btn-secondary">
+        <span data-es="Conoce el Método" data-en="See the Method">Conoce el Método</span>
+      </a>
+    </div>
+    <div class="hero-trust reveal">
+      <span class="stars">★★★★★</span>
+      <span data-es="Más de 200 familias acompañadas" data-en="200+ families guided">Más de 200 familias acompañadas</span>
+    </div>
+  </div>
+  <div class="scroll-indicator" data-es="Desliza" data-en="Scroll">Desliza</div>
+</header>
+
+<!-- ─────────── ABOUT ─────────── -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="section-eyebrow" data-es="Mi Historia" data-en="My Story">Mi Historia</span>
+        <h2 class="section-title">
+          <span data-es="Mi historia es tu historia." data-en="My story is your story.">Mi historia es tu historia.</span>
+          <span class="en" data-es-only>My story is your story.</span>
+        </h2>
+        <div class="about-text">
+          <p data-es="Cuando a mis hijas las diagnosticaron con autismo, me sentí completamente perdida. Los médicos me daban diagnósticos pero no herramientas. Los terapeutas hablaban entre ellos pero no conmigo." data-en="When my daughters were diagnosed with autism, I felt completely lost. The doctors handed me diagnoses but no tools. The therapists spoke to each other — not to me.">Cuando a mis hijas las diagnosticaron con autismo, me sentí completamente perdida. Los médicos me daban diagnósticos pero no herramientas. Los terapeutas hablaban entre ellos pero no conmigo.</p>
+          <p data-es="Tuve que aprender sola. Fallar. Levantarme. Y construir un método que de verdad funcionara — uno hecho para casa, no solo para la clínica. Hoy mis hijas están prosperando, conectadas, y plenas." data-en="I had to learn on my own. Fail. Get back up. And build a method that actually worked — one made for the home, not just the clinic. Today my girls are thriving, connected, and whole.">Tuve que aprender sola. Fallar. Levantarme. Y construir un método que de verdad funcionara — uno hecho para casa, no solo para la clínica. Hoy mis hijas están prosperando, conectadas, y plenas.</p>
+          <p data-es="Y eso mismo es lo que quiero para tu familia." data-en="And that is exactly what I want for your family.">Y eso mismo es lo que quiero para tu familia.</p>
+          <p class="en" data-es-only>When my daughters were diagnosed with autism, I felt completely alone. I learned, failed, and built a method that works. Today my girls are thriving — and yours can too.</p>
+        </div>
+        <div class="about-sig">
+          Julie Fonseca
+          <small data-es="Mentora de Padres • Autismo" data-en="Autism Parent Mentor">Mentora de Padres • Autismo</small>
+        </div>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="num">200+</div>
+            <div class="lbl" data-es="Familias" data-en="Families">Familias</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">12</div>
+            <div class="lbl" data-es="Años de experiencia" data-en="Years guiding">Años de experiencia</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">2</div>
+            <div class="lbl" data-es="Hijas que lo viven" data-en="Daughters who live it">Hijas que lo viven</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-wrap reveal">
+        <img src="public/images/about_image.jpg" alt="Dos hermanas jugando — esperanza para tu familia" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PROBLEM ─────────── -->
+<section class="section problem">
+  <div class="container">
+    <div class="center reveal">
+      <span class="section-eyebrow" data-es="Si esto te suena…" data-en="If this sounds familiar…">Si esto te suena…</span>
+      <h2 class="section-title">
+        <span data-es="No es tu culpa. No estás solo/a." data-en="It's not your fault. You are not alone.">No es tu culpa. No estás solo/a.</span>
+        <span class="en" data-es-only>It's not your fault. You are not alone.</span>
+      </h2>
+      <p class="section-intro">
+        <span data-es="Si te identificas con una sola de estas situaciones, este espacio es para ti." data-en="If even one of these resonates, this space was made for you.">Si te identificas con una sola de estas situaciones, este espacio es para ti.</span>
+      </p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-num">01</div>
+        <h3 data-es="Te sientes perdido/a después del diagnóstico" data-en="Overwhelmed after the diagnosis">Te sientes perdido/a después del diagnóstico</h3>
+        <p data-es="Te entregaron un papel y un nombre, pero nadie te explicó qué hacer mañana cuando despiertes con tu hijo." data-en="They handed you a paper and a diagnosis — but no one told you what to do tomorrow morning.">Te entregaron un papel y un nombre, pero nadie te explicó qué hacer mañana cuando despiertes con tu hijo.</p>
+        <p class="en" data-es-only>Overwhelmed after the diagnosis.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-num">02</div>
+        <h3 data-es="Los terapeutas no te explican qué hacer en casa" data-en="Therapists don't tell you what to do at home">Los terapeutas no te explican qué hacer en casa</h3>
+        <p data-es="Las sesiones terminan, la puerta se cierra, y vuelves a casa sin saber cómo aplicar lo que hicieron en la clínica." data-en="The session ends, the door closes — and you go home with no idea how to apply any of it.">Las sesiones terminan, la puerta se cierra, y vuelves a casa sin saber cómo aplicar lo que hicieron en la clínica.</p>
+        <p class="en" data-es-only>Therapists don't tell you what to do at home.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-num">03</div>
+        <h3 data-es="Su crisis te rompe el corazón cada día" data-en="Meltdowns feel uncontrollable">Su crisis te rompe el corazón cada día</h3>
+        <p data-es="Los meltdowns parecen impredecibles, agotadores, y dejas de salir de casa por miedo a una próxima crisis." data-en="Meltdowns feel unpredictable and exhausting — and you've stopped leaving the house because of them.">Los meltdowns parecen impredecibles, agotadores, y dejas de salir de casa por miedo a una próxima crisis.</p>
+        <p class="en" data-es-only>Meltdowns feel uncontrollable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── METHOD ─────────── -->
+<section class="section method" id="method">
+  <div class="container">
+    <div class="center reveal">
+      <span class="section-eyebrow" data-es="El Método Fonseca" data-en="The Fonseca Method">El Método Fonseca</span>
+      <h2 class="section-title">
+        <span data-es="El método que lo cambió todo." data-en="The method that changed everything.">El método que lo cambió todo.</span>
+        <span class="en" data-es-only>The Method That Changed Everything.</span>
+      </h2>
+      <p class="section-intro">
+        <span data-es="Cuatro pilares simples — diseñados desde mi cocina, probados en mi propia casa, refinados con cientos de familias." data-en="Four simple pillars — designed in my own kitchen, tested in my own home, refined across hundreds of families.">Cuatro pilares simples — diseñados desde mi cocina, probados en mi propia casa, refinados con cientos de familias.</span>
+      </p>
+    </div>
+
+    <div class="method-grid">
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <div>
+          <h3 data-es="1. Comunicación con propósito" data-en="1. Communication with purpose">1. Comunicación con propósito</h3>
+          <p data-es="Aprende a leer las señales únicas de tu hijo. No solo lo que dice — lo que está intentando decir. Aquí comienza todo." data-en="Learn to read your child's unique signals. Not just what they say — what they're trying to say. This is where everything begins.">Aprende a leer las señales únicas de tu hijo. No solo lo que dice — lo que está intentando decir. Aquí comienza todo.</p>
+          <p class="en" data-es-only>Learn to read your child's unique signals.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div>
+          <h3 data-es="2. Estructura sin estrés" data-en="2. Structure without stress">2. Estructura sin estrés</h3>
+          <p data-es="Rutinas claras hechas para niños en el espectro. Predecibles, calmantes, y diseñadas para reducir meltdowns desde la primera semana." data-en="Clear routines built for kids on the spectrum. Predictable, calming, and designed to reduce meltdowns within the first week.">Rutinas claras hechas para niños en el espectro. Predecibles, calmantes, y diseñadas para reducir meltdowns desde la primera semana.</p>
+          <p class="en" data-es-only>Routines that work — calm structure, fewer meltdowns.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <h3 data-es="3. Herramientas para el hogar" data-en="3. Tools for the home">3. Herramientas para el hogar</h3>
+          <p data-es="Técnicas concretas que tú usas — no solo el terapeuta. Para la mesa, el baño, la hora de dormir, el supermercado, el patio." data-en="Concrete techniques you actually use — not just the therapist. For mealtime, bath time, bedtime, the grocery store, the playground.">Técnicas concretas que tú usas — no solo el terapeuta. Para la mesa, el baño, la hora de dormir, el supermercado, el patio.</p>
+          <p class="en" data-es-only>Tools you use yourself — not just the therapist.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h3 data-es="4. Comunidad de apoyo" data-en="4. A community that holds you">4. Comunidad de apoyo</h3>
+          <p data-es="No estás solo/a en este camino. Una red de madres, padres y terapeutas que entienden — porque también lo viven." data-en="You are not walking this alone. A network of mothers, fathers and therapists who get it — because they live it too.">No estás solo/a en este camino. Una red de madres, padres y terapeutas que entienden — porque también lo viven.</p>
+          <p class="en" data-es-only>You are not alone on this road.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PROOF / TESTIMONIALS ─────────── -->
+<section class="section proof">
+  <div class="container">
+    <div class="proof-grid">
+      <div>
+        <span class="section-eyebrow reveal" data-es="Testimonios reales" data-en="Real Stories">Testimonios reales</span>
+        <h2 class="section-title reveal">
+          <span data-es="Familias que ya respiran." data-en="Families who finally breathe.">Familias que ya respiran.</span>
+          <span class="en" data-es-only>Families who finally breathe.</span>
+        </h2>
+        <p class="section-intro reveal" style="margin-bottom: 36px;">
+          <span data-es="No prometemos milagros — prometemos un camino. Estas familias lo caminaron." data-en="We don't promise miracles — we promise a path. These families walked it.">No prometemos milagros — prometemos un camino. Estas familias lo caminaron.</span>
+        </p>
+
+        <div class="testimonials">
+          <div class="testimonial reveal">
+            <div class="testimonial-label"><span class="stars">★★★★★</span> Testimonio</div>
+            <p data-es="«Después de 3 sesiones con Julie, finalmente entendí a mi hijo. Lloraba de alivio. Por primera vez en dos años, sentí que alguien me hablaba como madre, no como caso.»" data-en="«After 3 sessions with Julie, I finally understood my son. I cried with relief. For the first time in two years, someone spoke to me as a mother, not as a case.»">«Después de 3 sesiones con Julie, finalmente entendí a mi hijo. Lloraba de alivio. Por primera vez en dos años, sentí que alguien me hablaba como madre, no como caso.»</p>
+            <cite>María R. — <span data-es="Madre, Miami FL" data-en="Mom, Miami FL">Madre, Miami FL</span></cite>
+          </div>
+
+          <div class="testimonial reveal">
+            <div class="testimonial-label"><span class="stars">★★★★★</span> Testimonio</div>
+            <p data-es="«El enfoque de Julie complementa perfectamente lo que hago en clínica. Mis pacientes progresan más rápido cuando los padres toman su entrenamiento. Es el puente que faltaba.»" data-en="«Julie's approach complements perfectly what I do in clinic. My patients progress faster when the parents take her training. It's the missing bridge.»">«El enfoque de Julie complementa perfectamente lo que hago en clínica. Mis pacientes progresan más rápido cuando los padres toman su entrenamiento. Es el puente que faltaba.»</p>
+            <cite>Dr. Carla M. — <span data-es="Terapeuta ABA, San Juan PR" data-en="ABA Therapist, San Juan PR">Terapeuta ABA, San Juan PR</span></cite>
+          </div>
+
+          <div class="testimonial reveal">
+            <div class="testimonial-label"><span class="stars">★★★★★</span> Testimonio</div>
+            <p data-es="«My daughter's meltdowns went from daily to once a week. Julie's method gave us our home back — and our marriage. Life-changing, no exaggeration.»" data-en="«My daughter's meltdowns went from daily to once a week. Julie's method gave us our home back — and our marriage. Life-changing, no exaggeration.»">«My daughter's meltdowns went from daily to once a week. Julie's method gave us our home back — and our marriage. Life-changing, no exaggeration.»</p>
+            <cite>James &amp; Lucia — <span data-es="Padres, Nueva York NY" data-en="Parents, New York NY">Padres, Nueva York NY</span></cite>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-image reveal">
+        <img src="public/images/results_image.jpg" alt="Madre e hija reconectadas — resultados reales del Método Fonseca" />
+        <div class="results-quote">
+          <strong data-es="El día que la abracé sin miedo" data-en="The day I held her without fear">El día que la abracé sin miedo</strong>
+          <span data-es="«Pasamos de sobrevivir a vivir.»" data-en="«We went from surviving to living.»">«Pasamos de sobrevivir a vivir.»</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── SERVICES ─────────── -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="center reveal">
+      <span class="section-eyebrow" data-es="Cómo Trabajamos Juntos" data-en="How We Work Together">Cómo Trabajamos Juntos</span>
+      <h2 class="section-title">
+        <span data-es="Tres maneras de empezar." data-en="Three ways to begin.">Tres maneras de empezar.</span>
+        <span class="en" data-es-only>Three ways to begin.</span>
+      </h2>
+      <p class="section-intro">
+        <span data-es="Sea cual sea tu punto de partida — hay un camino para ti." data-en="Whatever your starting point — there's a path that fits.">Sea cual sea tu punto de partida — hay un camino para ti.</span>
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-tag" data-es="Para Padres" data-en="For Parents">Para Padres</div>
+        <h3 data-es="Consulta Individual" data-en="1:1 Mentoring">Consulta Individual</h3>
+        <div class="en-sub" data-es-only>1:1 Mentoring Session</div>
+        <ul>
+          <li data-es="Plan personalizado para tu hijo" data-en="Personalized plan for your child">Plan personalizado para tu hijo</li>
+          <li data-es="60 minutos en español o inglés" data-en="60 minutes in Spanish or English">60 minutos en español o inglés</li>
+          <li data-es="Herramientas para aplicar esa misma semana" data-en="Tools you apply that same week">Herramientas para aplicar esa misma semana</li>
+          <li data-es="Sesión de seguimiento incluida" data-en="Follow-up session included">Sesión de seguimiento incluida</li>
+        </ul>
+        <a href="#contact" class="service-link">
+          <span data-es="Empezar →" data-en="Begin →">Empezar →</span>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-tag" data-es="Para Familias" data-en="For Families">Para Familias</div>
+        <h3 data-es="Taller para Padres" data-en="Parent Workshop">Taller para Padres</h3>
+        <div class="en-sub" data-es-only>Group Workshop for Autism Parents</div>
+        <ul>
+          <li data-es="Grupo íntimo de madres y padres" data-en="Intimate group of moms and dads">Grupo íntimo de madres y padres</li>
+          <li data-es="4 sesiones de los 4 pilares" data-en="4 sessions covering the 4 pillars">4 sesiones de los 4 pilares</li>
+          <li data-es="Material descargable + comunidad" data-en="Downloadable materials + community">Material descargable + comunidad</li>
+          <li data-es="Apoyo grupal entre familias" data-en="Peer support between families">Apoyo grupal entre familias</li>
+        </ul>
+        <a href="#contact" class="service-link">
+          <span data-es="Reservar lugar →" data-en="Reserve your seat →">Reservar lugar →</span>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-tag" data-es="Para Profesionales" data-en="For Professionals">Para Profesionales</div>
+        <h3 data-es="Certificación para Terapeutas" data-en="Therapist Certification">Certificación para Terapeutas</h3>
+        <div class="en-sub" data-es-only>Train therapists in the Fonseca Method</div>
+        <ul>
+          <li data-es="Programa de 8 semanas" data-en="8-week program">Programa de 8 semanas</li>
+          <li data-es="Método Fonseca completo" data-en="Full Fonseca Method curriculum">Método Fonseca completo</li>
+          <li data-es="Caso de estudio en vivo" data-en="Live case study coaching">Caso de estudio en vivo</li>
+          <li data-es="Certificación oficial" data-en="Official certification">Certificación oficial</li>
+        </ul>
+        <a href="#contact" class="service-link">
+          <span data-es="Postular →" data-en="Apply →">Postular →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CTA SECTION ─────────── -->
+<section class="cta-section" id="contact">
+  <div class="container reveal">
+    <span class="cta-eyebrow" data-es="Tu próximo paso" data-en="Your next step">Tu próximo paso</span>
+    <h2 data-es="Tu hijo merece la mejor versión de ti." data-en="Your child deserves the best version of you.">Tu hijo merece la mejor versión de ti.</h2>
+    <p>
+      <span data-es="Una llamada de 30 minutos puede cambiar la trayectoria de toda tu familia. Sin costo. Sin compromiso. Solo claridad." data-en="A 30-minute call can change the trajectory of your entire family. No cost. No commitment. Just clarity.">Una llamada de 30 minutos puede cambiar la trayectoria de toda tu familia. Sin costo. Sin compromiso. Solo claridad.</span>
+      <span class="en" data-es-only>A 30-minute call can change the trajectory of your family.</span>
+    </p>
+    <a href="mailto:Julyska.alondra@gmail.com?subject=Consulta%20Gratuita%20-%20Julie%20Fonseca&body=Hola%20Julie,%20me%20gustar%C3%ADa%20agendar%20mi%20consulta%20gratuita." class="btn">
+      <span>
+        <span data-es="Habla con Julie hoy — gratis" data-en="Talk to Julie today — free">Habla con Julie hoy — gratis</span>
+        <span class="btn-en" data-es-only>Talk to Julie today — free</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+    <div class="cta-bullets">
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-es="30 minutos" data-en="30 minutes">30 minutos</span>
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-es="Sin costo" data-en="No cost">Sin costo</span>
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-es="En español o inglés" data-en="Spanish or English">En español o inglés</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">Julie Fonseca</div>
+    <div class="footer-tag" data-es="Mentora de Padres • Autismo" data-en="Autism Parent Mentor">Mentora de Padres • Autismo</div>
+    <div class="footer-contact">
+      <a href="mailto:Julyska.alondra@gmail.com">Julyska.alondra@gmail.com</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copy">
+      © 2026 Julie Fonseca — <span data-es="Autism Parent Mentor. Todos los derechos reservados." data-en="Autism Parent Mentor. All rights reserved.">Autism Parent Mentor. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── NAV scroll state
+  const nav = document.getElementById('nav');
+  const setNavState = () => {
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  setNavState();
+  window.addEventListener('scroll', setNavState, { passive: true });
+
+  // ─── Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ─── Language toggle (ES default, EN secondary)
+  // body has no class = bilingual (default). Toggle hides ES-only or EN-only blocks.
+  const langBtn = document.getElementById('langToggle');
+  let lang = 'es'; // 'es' shows ES + EN subtitles; 'en' shows EN only
+  langBtn.addEventListener('click', () => {
+    if (lang === 'es') {
+      // switch to EN-only
+      document.body.classList.add('en-only');
+      document.body.classList.remove('es-only');
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const en = el.getAttribute('data-en');
+        if (en) {
+          if (!el.dataset.origEs) el.dataset.origEs = el.textContent;
+          el.textContent = en;
+        }
+      });
+      langBtn.textContent = 'ES';
+      document.documentElement.setAttribute('lang', 'en');
+      lang = 'en';
+    } else {
+      // back to ES + bilingual
+      document.body.classList.remove('en-only');
+      document.querySelectorAll('[data-en]').forEach(el => {
+        if (el.dataset.origEs) el.textContent = el.dataset.origEs;
+      });
+      langBtn.textContent = 'EN';
+      document.documentElement.setAttribute('lang', 'es');
+      lang = 'es';
+    }
+  });
+
+  // hide the [data-es-only] english subtitles when switched to EN-only
+  const style = document.createElement('style');
+  style.textContent = `body.en-only [data-es-only] { display: none !important; }`;
+  document.head.appendChild(style);
+
+  // ─── Smooth scroll for anchor links (already in CSS, but improve focus)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
