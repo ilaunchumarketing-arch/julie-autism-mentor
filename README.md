@@ -19,4 +19,4 @@ Then open http://localhost:4324
 - Deployed: Vercel (auto-deploy from `main`)
 
 ## Contact
-Julyska.alondra@gmail.com
+doubleautismlovecreations@gmail.com
