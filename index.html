@@ -52,7 +52,9 @@
     line-height: 1.6;
     font-size: 17px;
     overflow-x: clip;
+    overflow-wrap: break-word;
   }
+  h1, h2, h3, h4, p, span, li, cite, a { overflow-wrap: break-word; }
 
   h1, h2, h3, h4 {
     font-family: 'Playfair Display', Georgia, serif;
@@ -750,6 +752,196 @@
   }
   .service-link:hover { gap: 14px; }
 
+  /* ───────────── SHOP (Ebooks & Courses) ───────────── */
+  .shop {
+    background: var(--cream-warm);
+    padding: 110px 0;
+    position: relative;
+  }
+  .shop::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(193,123,84,0.08) 0%, transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(74,124,89,0.06) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .shop .container { position: relative; z-index: 1; }
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+  .shop-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    position: relative;
+  }
+  .shop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+  .shop-cover {
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    overflow: hidden;
+  }
+  .shop-card:nth-child(2) .shop-cover { background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%); }
+  .shop-card:nth-child(3) .shop-cover { background: linear-gradient(135deg, #6b5b8a 0%, #534470 100%); }
+  .shop-card:nth-child(4) .shop-cover { background: linear-gradient(135deg, #8a6b4a 0%, #6e5238 100%); }
+  .shop-cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(0,0,0,0.18) 0%, transparent 50%);
+  }
+  .shop-cover-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+  }
+  .shop-cover-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 14px;
+    opacity: 0.95;
+  }
+  .shop-cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .shop-cover-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
+  .shop-body {
+    padding: 26px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .shop-tag {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .shop-tag .tag-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--terracotta);
+  }
+  .shop-card h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .shop-card .en-sub {
+    font-style: italic;
+    color: #888;
+    font-size: 13.5px;
+    margin-bottom: 14px;
+  }
+  .shop-card p {
+    color: var(--charcoal-soft);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+  .shop-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    font-size: 12.5px;
+    color: var(--charcoal-soft);
+  }
+  .shop-meta span { display: flex; align-items: center; gap: 6px; }
+  .shop-meta svg { color: var(--sage); }
+  .shop-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(74, 124, 89, 0.12);
+  }
+  .shop-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--sage-dark);
+    line-height: 1;
+  }
+  .shop-price .currency { font-size: 16px; vertical-align: super; opacity: 0.7; margin-right: 1px; }
+  .shop-price .strike { font-size: 14px; color: #b0b0b0; text-decoration: line-through; font-weight: 400; margin-right: 6px; }
+  .shop-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.25s var(--ease), gap 0.25s var(--ease);
+  }
+  .shop-cta:hover { background: var(--terracotta-dark); gap: 10px; }
+  .shop-card .badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 999px;
+    z-index: 2;
+  }
+  .shop-card .badge.new { background: var(--terracotta); }
+
   /* ───────────── CTA SECTION ───────────── */
   .cta-section {
     background: linear-gradient(135deg, #2c3e34 0%, #1f2c25 100%);
@@ -891,24 +1083,197 @@
     .results-image img { aspect-ratio: 4 / 4; }
   }
 
-  @media (max-width: 600px) {
+  .nav-cta .nav-cta-short { display: none; }
+
+  /* ───────────── MOBILE (≤640px) ───────────── */
+  @media (max-width: 640px) {
     body { font-size: 16px; }
-    .container { padding: 0 20px; }
-    .hero-inner { padding: 130px 0 100px; }
-    .nav-cta { padding: 9px 16px; font-size: 13px; }
+    .container { padding: 0 18px; }
+
+    /* Section padding tighter on mobile */
+    .section { padding: 56px 0; }
+    .method, .proof, .services, .cta-section, .shop { padding: 56px 0; }
+
+    /* NAV */
+    .nav { padding: 12px 0; }
+    .nav.scrolled { padding: 8px 0; }
+    .brand { font-size: 17px; }
+    .brand .tag {
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      margin-top: 1px;
+    }
+    .nav-cta { padding: 8px 14px; font-size: 12.5px; white-space: nowrap; }
     .nav-cta .nav-cta-label { display: none; }
     .nav-cta .nav-cta-short { display: inline; }
-    .brand { font-size: 18px; }
-    .brand .tag { font-size: 9.5px; }
-    .btn { padding: 16px 28px; font-size: 14px; }
-    .pillar { flex-direction: column; gap: 16px; padding: 28px 24px; }
-    .about-stats { grid-template-columns: 1fr; gap: 18px; text-align: left; }
-    .results-quote { position: static; margin-top: -40px; margin-left: 16px; margin-right: 16px; }
-    .results-image { overflow: visible; }
-    .cta-bullets { gap: 16px; flex-direction: column; align-items: center; }
+    .lang-toggle { padding: 5px 10px; font-size: 12px; }
+
+    /* HERO — full-bleed, tighter */
+    .hero-inner { padding: 90px 0 56px; }
+    .hero-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: 0.14em;
+      padding: 6px 12px;
+      margin-bottom: 18px;
+      max-width: 100%;
+      white-space: normal;
+      line-height: 1.4;
+    }
+    .hero h1 {
+      font-size: 1.95rem;
+      line-height: 1.12;
+      max-width: 100%;
+    }
+    .hero-subline {
+      font-size: 1rem;
+      line-height: 1.45;
+      max-width: 100%;
+    }
+    .hero-subtext {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    .hero-subtext .en { font-size: 0.85em; margin-top: 6px; }
+
+    /* CTA buttons — full-width on mobile, stacked */
+    .hero-cta-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 15px 22px;
+      font-size: 13.5px;
+      letter-spacing: 0.03em;
+      box-sizing: border-box;
+    }
+    .btn-en { font-size: 10px; margin-top: 2px; }
+
+    .hero-trust {
+      margin-top: 22px;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+    .scroll-indicator { display: none; }
+
+    /* SECTION TITLES */
+    .section-title { font-size: 1.7rem; line-height: 1.18; }
+    .section-title .en { font-size: 0.55em; margin-top: 8px; }
+    .section-eyebrow { font-size: 10.5px; letter-spacing: 0.16em; margin-bottom: 14px; }
+    .section-intro { font-size: 16px; line-height: 1.65; }
+    .section-intro .en { font-size: 0.9em; margin-top: 10px; }
+
+    /* ABOUT */
+    .about-grid { gap: 36px; }
+    .about-text p { font-size: 15.5px; line-height: 1.7; margin-bottom: 14px; }
+    .about-text p.en { font-size: 14px; padding-left: 14px; }
+    .about-sig { font-size: 19px; margin-top: 22px; }
+    .about-sig small { font-size: 10.5px; }
+    .about-image-wrap { margin-top: 8px; }
+    .about-image-wrap::before { display: none; }
+    .about-stats {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 22px;
+      text-align: center;
+    }
+    .about-stat { text-align: center; }
+    .about-stat .num { font-size: 26px; }
+    .about-stat .lbl { font-size: 10px; letter-spacing: 0.08em; margin-top: 5px; line-height: 1.3; }
+
+    /* PROBLEM cards */
+    .problem-grid { gap: 16px; margin-top: 36px; }
+    .problem-card { padding: 26px 22px; }
+    .problem-num { font-size: 44px; margin-bottom: 8px; }
+    .problem-card h3 { font-size: 18px; line-height: 1.3; }
+    .problem-card p { font-size: 14.5px; line-height: 1.6; }
+    .problem-card p.en { font-size: 13px; }
+
+    /* METHOD pillars */
+    .method-grid { gap: 16px; margin-top: 36px; }
+    .pillar {
+      flex-direction: column;
+      gap: 14px;
+      padding: 24px 22px;
+    }
+    .pillar-icon { width: 48px; height: 48px; border-radius: 12px; }
+    .pillar-icon svg { width: 24px; height: 24px; }
+    .pillar h3 { font-size: 19px; line-height: 1.25; margin-bottom: 8px; }
+    .pillar p { font-size: 14.5px; line-height: 1.6; }
+    .pillar p.en { font-size: 13px; }
+
+    /* PROOF / TESTIMONIALS */
+    .proof-grid { gap: 36px; }
+    .testimonial { padding: 22px 20px; }
+    .testimonial p { font-size: 16px; line-height: 1.5; }
+    .testimonial cite { font-size: 13px; gap: 8px; flex-wrap: wrap; }
+    .testimonial-label { font-size: 10px; letter-spacing: 0.14em; }
+    .results-image { margin-top: 8px; }
+    .results-image::before { display: none; }
+    .results-quote {
+      position: static;
+      margin: -24px 12px 0;
+      padding: 16px 18px;
+      font-size: 14.5px;
+    }
+    .results-quote strong { font-size: 10px; letter-spacing: 0.14em; }
+
+    /* SERVICES */
+    .services-grid { gap: 16px; margin-top: 36px; }
+    .service-card { padding: 28px 22px; }
+    .service-card h3 { font-size: 22px; }
+    .service-card .en-sub { font-size: 13px; margin-bottom: 14px; }
+    .service-card ul { font-size: 14.5px; }
+    .service-card li { padding: 5px 0 5px 22px; }
+    .service-card li::before { top: 12px; }
+    .service-tag { font-size: 10px; letter-spacing: 0.14em; }
+    .service-link { font-size: 13px; }
+
+    /* SHOP */
+    .shop-grid { grid-template-columns: 1fr !important; gap: 18px !important; margin-top: 36px !important; }
+    .shop-card { padding: 22px !important; }
+    .shop-cover { aspect-ratio: 16 / 10 !important; }
+    .shop-card h3 { font-size: 19px !important; }
+    .shop-card p { font-size: 14.5px !important; }
+    .shop-price { font-size: 22px !important; }
+
+    /* CTA SECTION */
+    .cta-section h2 { font-size: 1.85rem; line-height: 1.2; }
+    .cta-section p { font-size: 16px; line-height: 1.55; }
+    .cta-section p .en { font-size: 14px; }
+    .cta-bullets {
+      gap: 12px;
+      margin-top: 28px;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13px;
+    }
+    .cta-eyebrow { font-size: 10.5px; letter-spacing: 0.16em; }
+
+    /* FOOTER */
+    footer { padding: 44px 0 24px; }
+    .footer-brand { font-size: 19px; }
+    .footer-tag { font-size: 10px; letter-spacing: 0.16em; }
+    .footer-contact a { font-size: 13.5px; }
+    .footer-copy { font-size: 11px; line-height: 1.5; padding: 0 8px; }
   }
 
-  .nav-cta .nav-cta-short { display: none; }
+  /* ───────────── EXTRA-SMALL ≤380px ───────────── */
+  @media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .hero h1 { font-size: 1.78rem; }
+    .section-title { font-size: 1.55rem; }
+    .brand .tag { font-size: 8.5px; }
+    .nav-cta { padding: 7px 12px; font-size: 11.5px; }
+  }
 </style>
 </head>
 <body>
@@ -924,7 +1289,7 @@
       <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
       <a href="#contact" class="nav-cta">
         <span class="nav-cta-label" data-es="Reservar Sesión" data-en="Book Session">Reservar Sesión</span>
-        <span class="nav-cta-short">→</span>
+        <span class="nav-cta-short" data-es="Reservar" data-en="Book">Reservar</span>
       </a>
     </div>
   </div>
@@ -1217,6 +1582,166 @@
           <span data-es="Solicitar paquete →" data-en="Request kit →">Solicitar paquete →</span>
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── SHOP (Ebooks & Courses) ─────────── -->
+<section class="shop" id="shop">
+  <div class="container">
+    <div class="center reveal">
+      <span class="section-eyebrow" data-es="Aprende a tu Ritmo" data-en="Learn at Your Own Pace">Aprende a tu Ritmo</span>
+      <h2 class="section-title">
+        <span data-es="Ebooks y cursos para padres ocupados." data-en="Ebooks and courses for busy parents.">Ebooks y cursos para padres ocupados.</span>
+        <span class="en" data-es-only>Ebooks and online courses for busy parents.</span>
+      </h2>
+      <p class="section-intro">
+        <span data-es="No siempre puedes tomar una sesión 1:1. Para esos momentos, te dejo el método en formato ebook y curso en video — para que aprendas cuando tu hijo duerma, en español, paso a paso." data-en="You can't always take a 1:1 session. For those moments, I've packaged the method as ebooks and video courses — so you can learn when your child sleeps, in Spanish, step by step.">No siempre puedes tomar una sesión 1:1. Para esos momentos, te dejo el método en formato ebook y curso en video — para que aprendas cuando tu hijo duerma, en español, paso a paso.</span>
+      </p>
+    </div>
+
+    <div class="shop-grid">
+
+      <!-- EBOOK 1: First & Then -->
+      <div class="shop-card reveal">
+        <span class="badge new" data-es="Más Vendido" data-en="Best Seller">Más Vendido</span>
+        <div class="shop-cover">
+          <div class="shop-cover-inner">
+            <span class="shop-cover-kicker">Ebook · PDF</span>
+            <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h6M9 11h6"/></svg>
+            <div class="shop-cover-title" data-es="First &amp; Then" data-en="First &amp; Then">First &amp; Then</div>
+          </div>
+        </div>
+        <div class="shop-body">
+          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Ebook Digital" data-en="Digital Ebook">Ebook Digital</span></div>
+          <h3 data-es="Guía Completa: Primero y Después" data-en="The Complete First & Then Guide">Guía Completa: Primero y Después</h3>
+          <div class="en-sub" data-es-only>The Complete First &amp; Then Guide</div>
+          <p data-es="48 páginas con ejemplos reales, tarjetas imprimibles listas para recortar, y guion paso a paso para introducir First & Then desde hoy." data-en="48 pages with real examples, ready-to-print cut-out cards, and a step-by-step script to introduce First & Then starting today.">48 páginas con ejemplos reales, tarjetas imprimibles listas para recortar, y guion paso a paso para introducir First &amp; Then desde hoy.</p>
+          <div class="shop-meta">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-es="48 páginas" data-en="48 pages">48 páginas</span>
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-es="Acceso inmediato" data-en="Instant access">Acceso inmediato</span>
+            </span>
+          </div>
+          <div class="shop-footer">
+            <div class="shop-price"><span class="currency">$</span>17</div>
+            <a href="mailto:Julyska.alondra@gmail.com?subject=Ebook%20First%20%26%20Then" class="shop-cta">
+              <span data-es="Comprar" data-en="Buy">Comprar</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COURSE 1: Visual Schedule -->
+      <div class="shop-card reveal">
+        <span class="badge" data-es="Curso en Video" data-en="Video Course">Curso en Video</span>
+        <div class="shop-cover">
+          <div class="shop-cover-inner">
+            <span class="shop-cover-kicker">Curso · Video</span>
+            <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            <div class="shop-cover-title">Visual Schedule Masterclass</div>
+          </div>
+        </div>
+        <div class="shop-body">
+          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Curso Online" data-en="Online Course">Curso Online</span></div>
+          <h3 data-es="Rutinas Visuales: Curso Completo" data-en="Visual Schedules: Full Course">Rutinas Visuales: Curso Completo</h3>
+          <div class="en-sub" data-es-only>Visual Schedules: Full Video Course</div>
+          <p data-es="6 lecciones en video, plantillas descargables, y soporte por email durante 30 días. Aprende a armar la rutina visual perfecta para tu hijo." data-en="6 video lessons, downloadable templates, and 30 days of email support. Learn to build the perfect visual schedule for your child.">6 lecciones en video, plantillas descargables, y soporte por email durante 30 días. Aprende a armar la rutina visual perfecta para tu hijo.</p>
+          <div class="shop-meta">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span data-es="6 lecciones" data-en="6 lessons">6 lecciones</span>
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-es="~2 hrs" data-en="~2 hrs">~2 hrs</span>
+            </span>
+          </div>
+          <div class="shop-footer">
+            <div class="shop-price"><span class="strike">$67</span><span class="currency">$</span>47</div>
+            <a href="mailto:Julyska.alondra@gmail.com?subject=Curso%20Rutinas%20Visuales" class="shop-cta">
+              <span data-es="Inscribirme" data-en="Enroll">Inscribirme</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- EBOOK 2: Token System -->
+      <div class="shop-card reveal">
+        <span class="badge" data-es="Nuevo" data-en="New">Nuevo</span>
+        <div class="shop-cover">
+          <div class="shop-cover-inner">
+            <span class="shop-cover-kicker">Ebook + Material</span>
+            <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+            <div class="shop-cover-title">Token System</div>
+          </div>
+        </div>
+        <div class="shop-body">
+          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Ebook + Tableros" data-en="Ebook + Boards">Ebook + Tableros</span></div>
+          <h3 data-es="Sistema de Recompensas Visual" data-en="Visual Token System">Sistema de Recompensas Visual</h3>
+          <div class="en-sub" data-es-only>Visual Token System Guide</div>
+          <p data-es="Ebook + 12 tableros de tokens listos para imprimir, diseñados para distintos comportamientos y edades. Sin sobornos, sin gritos." data-en="Ebook + 12 ready-to-print token boards, designed for different behaviors and ages. No bribes, no yelling.">Ebook + 12 tableros de tokens listos para imprimir, diseñados para distintos comportamientos y edades. Sin sobornos, sin gritos.</p>
+          <div class="shop-meta">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+              <span data-es="12 tableros" data-en="12 boards">12 tableros</span>
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-es="PDF descargable" data-en="Downloadable PDF">PDF descargable</span>
+            </span>
+          </div>
+          <div class="shop-footer">
+            <div class="shop-price"><span class="currency">$</span>24</div>
+            <a href="mailto:Julyska.alondra@gmail.com?subject=Ebook%20Token%20System" class="shop-cta">
+              <span data-es="Comprar" data-en="Buy">Comprar</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COURSE 2: Communication Toolkit -->
+      <div class="shop-card reveal">
+        <span class="badge" data-es="Bundle" data-en="Bundle">Bundle</span>
+        <div class="shop-cover">
+          <div class="shop-cover-inner">
+            <span class="shop-cover-kicker">Curso + Ebooks</span>
+            <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <div class="shop-cover-title" data-es="Caja de Comunicación" data-en="Communication Toolkit">Caja de Comunicación</div>
+          </div>
+        </div>
+        <div class="shop-body">
+          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Bundle Completo" data-en="Complete Bundle">Bundle Completo</span></div>
+          <h3 data-es="Toolkit de Comunicación No Verbal" data-en="Non-Verbal Communication Toolkit">Toolkit de Comunicación No Verbal</h3>
+          <div class="en-sub" data-es-only>Non-Verbal Communication Toolkit Bundle</div>
+          <p data-es="Todo el método en un solo paquete: los 3 ebooks + el curso de Rutinas Visuales + tableros de comunicación + vocabulario visual. Ahorra 40%." data-en="The whole method in one bundle: all 3 ebooks + the Visual Schedules course + communication boards + visual vocabulary. Save 40%.">Todo el método en un solo paquete: los 3 ebooks + el curso de Rutinas Visuales + tableros de comunicación + vocabulario visual. Ahorra 40%.</p>
+          <div class="shop-meta">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L12 3 4 7l8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+              <span data-es="Todo incluido" data-en="All included">Todo incluido</span>
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-es="Mejor precio" data-en="Best value">Mejor precio</span>
+            </span>
+          </div>
+          <div class="shop-footer">
+            <div class="shop-price"><span class="strike">$155</span><span class="currency">$</span>97</div>
+            <a href="mailto:Julyska.alondra@gmail.com?subject=Bundle%20Toolkit%20Completo" class="shop-cta">
+              <span data-es="Quiero el Bundle" data-en="Get Bundle">Quiero el Bundle</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
