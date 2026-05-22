@@ -138,30 +138,6 @@
     box-shadow: var(--shadow-md);
   }
 
-  .lang-toggle {
-    background: rgba(255, 255, 255, 0.88);
-    color: var(--sage-dark);
-    border: 1px solid rgba(74, 124, 89, 0.35);
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: all 0.25s var(--ease);
-    font-family: inherit;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 2px 8px rgba(44,44,44,0.06);
-  }
-  .lang-toggle:hover { background: var(--white); box-shadow: 0 4px 12px rgba(44,44,44,0.1); }
-  .nav.scrolled .lang-toggle {
-    background: rgba(74, 124, 89, 0.08);
-    color: var(--sage-dark);
-    border-color: rgba(74, 124, 89, 0.25);
-  }
-  .nav.scrolled .lang-toggle:hover { background: rgba(74, 124, 89, 0.16); }
-
   /* ───────────── HERO (2-col, image visible) ───────────── */
   .hero {
     position: relative;
@@ -236,13 +212,6 @@
   .hero-subtext strong {
     color: var(--sage-dark);
     font-weight: 700;
-  }
-  .hero-subtext .en {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.88em;
-    color: #888;
-    font-style: italic;
   }
 
   /* HERO MEDIA (image column) */
@@ -361,17 +330,6 @@
     color: var(--sage-dark);
   }
 
-  .btn-en {
-    display: block;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    opacity: 0.75;
-    text-transform: none;
-    margin-top: 3px;
-    font-style: italic;
-  }
-
   .hero-cta-row {
     display: flex;
     flex-wrap: wrap;
@@ -426,28 +384,11 @@
     margin-bottom: 16px;
     text-wrap: balance;
   }
-  .section-title .en {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 0.55em;
-    font-weight: 400;
-    color: var(--sage);
-    margin-top: 10px;
-    letter-spacing: 0.005em;
-  }
   .section-intro {
     max-width: 680px;
     font-size: 18px;
     color: var(--charcoal-soft);
     line-height: 1.7;
-  }
-  .section-intro .en {
-    display: block;
-    margin-top: 14px;
-    font-style: italic;
-    color: #777;
-    font-size: 0.92em;
   }
   .center { text-align: center; }
   .center .section-intro { margin-left: auto; margin-right: auto; }
@@ -467,13 +408,6 @@
     margin-bottom: 18px;
     font-size: 17px;
     line-height: 1.8;
-  }
-  .about-text p.en {
-    font-style: italic;
-    color: #888;
-    font-size: 15.5px;
-    padding-left: 18px;
-    border-left: 2px solid var(--terracotta);
   }
   .about-sig {
     margin-top: 28px;
@@ -577,12 +511,6 @@
     margin-bottom: 12px;
     color: var(--charcoal);
   }
-  .problem-card p.en {
-    font-style: italic;
-    color: #888;
-    font-size: 14.5px;
-    margin-top: 8px;
-  }
 
   /* ───────────── METHOD ───────────── */
   .method {
@@ -640,12 +568,6 @@
     color: var(--charcoal-soft);
     font-size: 15.5px;
     line-height: 1.7;
-  }
-  .pillar p.en {
-    margin-top: 8px;
-    font-style: italic;
-    color: #999;
-    font-size: 14px;
   }
 
   /* ───────────── PROOF / TESTIMONIALS ───────────── */
@@ -798,12 +720,6 @@
     font-size: 26px;
     margin-bottom: 10px;
   }
-  .service-card .en-sub {
-    font-style: italic;
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 18px;
-  }
   .service-card ul {
     list-style: none;
     margin: 8px 0 24px;
@@ -955,12 +871,6 @@
     line-height: 1.25;
     margin-bottom: 8px;
   }
-  .shop-card .en-sub {
-    font-style: italic;
-    color: #888;
-    font-size: 13.5px;
-    margin-bottom: 14px;
-  }
   .shop-card p {
     color: var(--charcoal-soft);
     font-size: 15px;
@@ -1095,13 +1005,6 @@
     margin: 0 auto 40px;
     line-height: 1.6;
   }
-  .cta-section p .en {
-    display: block;
-    font-style: italic;
-    font-size: 15px;
-    margin-top: 8px;
-    color: rgba(255,255,255,0.6);
-  }
   .cta-bullets {
     display: flex;
     justify-content: center;
@@ -1184,10 +1087,6 @@
   .reveal:nth-child(2) { transition-delay: 0.08s; }
   .reveal:nth-child(3) { transition-delay: 0.16s; }
 
-  /* ───────────── EN TOGGLE ───────────── */
-  body.en-only [data-es] { display: none !important; }
-  body.es-only [data-en] { display: none !important; }
-
   /* ───────────── RESPONSIVE ───────────── */
   @media (max-width: 1024px) {
     .hero-content { padding: 100px 36px 60px; }
@@ -1237,7 +1136,6 @@
     .nav-cta { padding: 8px 14px; font-size: 12.5px; white-space: nowrap; }
     .nav-cta .nav-cta-label { display: none; }
     .nav-cta .nav-cta-short { display: inline; }
-    .lang-toggle { padding: 5px 10px; font-size: 12px; }
 
     /* HERO 2-col → stack on mobile */
     .hero {
@@ -1299,7 +1197,6 @@
       max-width: 100%;
       margin-bottom: 24px;
     }
-    .hero-subtext .en { font-size: 0.85em; margin-top: 8px; }
 
     /* CTA buttons — full-width on mobile, stacked */
     .hero-cta-row {
@@ -1316,7 +1213,6 @@
       letter-spacing: 0.03em;
       box-sizing: border-box;
     }
-    .btn-en { font-size: 10px; margin-top: 2px; }
 
     .hero-trust {
       margin-top: 22px;
@@ -1329,15 +1225,12 @@
 
     /* SECTION TITLES */
     .section-title { font-size: 1.7rem; line-height: 1.18; }
-    .section-title .en { font-size: 0.55em; margin-top: 8px; }
     .section-eyebrow { font-size: 10.5px; letter-spacing: 0.16em; margin-bottom: 14px; }
     .section-intro { font-size: 16px; line-height: 1.65; }
-    .section-intro .en { font-size: 0.9em; margin-top: 10px; }
 
     /* ABOUT */
     .about-grid { gap: 36px; }
     .about-text p { font-size: 15.5px; line-height: 1.7; margin-bottom: 14px; }
-    .about-text p.en { font-size: 14px; padding-left: 14px; }
     .about-sig { font-size: 19px; margin-top: 22px; }
     .about-sig small { font-size: 10.5px; }
     .about-image-wrap { margin-top: 8px; }
@@ -1359,7 +1252,6 @@
     .problem-num { font-size: 44px; margin-bottom: 8px; }
     .problem-card h3 { font-size: 18px; line-height: 1.3; }
     .problem-card p { font-size: 14.5px; line-height: 1.6; }
-    .problem-card p.en { font-size: 13px; }
 
     /* METHOD pillars */
     .method-grid { gap: 16px; margin-top: 36px; }
@@ -1372,7 +1264,6 @@
     .pillar-icon svg { width: 24px; height: 24px; }
     .pillar h3 { font-size: 19px; line-height: 1.25; margin-bottom: 8px; }
     .pillar p { font-size: 14.5px; line-height: 1.6; }
-    .pillar p.en { font-size: 13px; }
 
     /* PROOF / TESTIMONIALS */
     .proof-grid { gap: 36px; }
@@ -1394,7 +1285,6 @@
     .services-grid { gap: 16px; margin-top: 36px; }
     .service-card { padding: 28px 22px; }
     .service-card h3 { font-size: 22px; }
-    .service-card .en-sub { font-size: 13px; margin-bottom: 14px; }
     .service-card ul { font-size: 14.5px; }
     .service-card li { padding: 5px 0 5px 22px; }
     .service-card li::before { top: 12px; }
@@ -1412,7 +1302,6 @@
     /* CTA SECTION */
     .cta-section h2 { font-size: 1.85rem; line-height: 1.2; }
     .cta-section p { font-size: 16px; line-height: 1.55; }
-    .cta-section p .en { font-size: 14px; }
     .cta-bullets {
       gap: 12px;
       margin-top: 28px;
@@ -1447,15 +1336,12 @@
   <div class="container nav-inner">
     <a href="#top" class="brand">
       Julie Fonseca
-      <span class="tag" data-es="Mamá · Mentora · Autismo No Verbal" data-en="Mom · Mentor · Non-verbal Autism">Mamá · Mentora · Autismo No Verbal</span>
+      <span class="tag">Mamá · Mentora · Autismo No Verbal</span>
     </a>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
-      <a href="#contact" class="nav-cta">
-        <span class="nav-cta-label" data-es="Reservar Sesión" data-en="Book Session">Reservar Sesión</span>
-        <span class="nav-cta-short" data-es="Reservar" data-en="Book">Reservar</span>
-      </a>
-    </div>
+    <a href="#contact" class="nav-cta">
+      <span class="nav-cta-label">Reservar Sesión</span>
+      <span class="nav-cta-short">Reservar</span>
+    </a>
   </div>
 </nav>
 
@@ -1463,28 +1349,26 @@
 <header class="hero" id="top">
   <div class="hero-content">
     <div class="hero-content-inner">
-      <span class="hero-eyebrow reveal" data-es="Para mamás de hijos con autismo no verbal" data-en="For moms of non-verbal autistic children">Para mamás de hijos con autismo no verbal</span>
-      <h1 class="reveal" data-es="Tu hijo ya te está hablando. Solo necesitas aprender su idioma." data-en="Your child is already speaking to you. You just need to learn their language." data-en-html="Your child is already speaking to you.<br><span class=&quot;h1-accent&quot;>You just need to learn their language.</span>">Tu hijo ya te está hablando.<br><span class="h1-accent">Solo necesitas aprender su idioma.</span></h1>
-      <p class="hero-subline reveal" data-es="No es que no se comunique. Es que nadie te ha enseñado a leerlo." data-en="It's not that they can't communicate. No one has taught you to read them.">It's not that they can't communicate. No one has taught you to read them.</p>
+      <span class="hero-eyebrow reveal">Para mamás de hijos con autismo no verbal</span>
+      <h1 class="reveal">Tu hijo ya te está hablando.<br><span class="h1-accent">Solo necesitas aprender su idioma.</span></h1>
+      <p class="hero-subline reveal">It's not that they can't communicate. No one has taught you to read them.</p>
       <p class="hero-subtext reveal">
-        <span data-es="Soy Julie — mamá de dos hijas con autismo no verbal." data-en="I'm Julie — mom of two non-verbal autistic daughters." data-en-html="I'm Julie — mom of two non-verbal autistic daughters. For over 10 years, the specialists who trained my girls trained me too. Today I share what they taught me, mom to mom: <strong>First &amp; Then, visual schedules, token systems</strong>. Real tools that work at home.">Soy Julie — mamá de dos hijas con autismo no verbal. Por más de 10 años los especialistas que entrenaron a mis hijas me entrenaron a mí también. Hoy comparto contigo lo que ellos me enseñaron, de mamá a mamá: <strong>First &amp; Then, rutinas visuales, sistemas de tokens</strong>. Estrategias reales que funcionan en casa.</span>
-        <span class="en" data-es-only>I teach the visual language your non-verbal child already understands. Real tools that work at home.</span>
-      </p>
+        <span>Soy Julie — mamá de dos hijas con autismo no verbal. Por más de 10 años los especialistas que entrenaron a mis hijas me entrenaron a mí también. Hoy comparto contigo lo que ellos me enseñaron, de mamá a mamá: <strong>First &amp; Then, rutinas visuales, sistemas de tokens</strong>. Estrategias reales que funcionan en casa.</span>
+              </p>
       <div class="hero-cta-row reveal">
         <a href="#contact" class="btn">
           <span>
-            <span data-es="Reserva tu Primera Sesión" data-en="Book Your First Session">Reserva tu Primera Sesión</span>
-            <span class="btn-en" data-es-only>Book Your First Session</span>
-          </span>
+            <span>Reserva tu Primera Sesión</span>
+                      </span>
           <span class="arrow">→</span>
         </a>
         <a href="#method" class="btn btn-secondary">
-          <span data-es="Ver los 4 Temas" data-en="See the 4 Topics">Ver los 4 Temas</span>
+          <span>Ver los 4 Temas</span>
         </a>
       </div>
       <div class="hero-trust reveal">
         <span class="stars">★★★★★</span>
-        <span data-es="+10 años aprendiendo de especialistas · Mamá de 2 hijas no verbales · 100% en español" data-en="+10 years learning from specialists · Mom of 2 non-verbal daughters · 100% in Spanish">+10 años aprendiendo de especialistas · Mamá de 2 hijas no verbales · 100% en español</span>
+        <span>+10 años aprendiendo de especialistas · Mamá de 2 hijas no verbales · 100% en español</span>
       </div>
     </div>
   </div>
@@ -1494,8 +1378,8 @@
       <div class="hero-media-badge-inner">
         <div class="badge-pulse"></div>
         <div>
-          <div class="badge-label" data-es="Sesión 1:1 en español" data-en="1:1 Session in Spanish">Sesión 1:1 en español</div>
-          <div class="badge-sub" data-es="Aprende esta semana" data-en="Start learning this week">Aprende esta semana</div>
+          <div class="badge-label">Sesión 1:1 en español</div>
+          <div class="badge-sub">Aprende esta semana</div>
         </div>
       </div>
     </div>
@@ -1507,40 +1391,38 @@
   <div class="container">
     <div class="about-grid">
       <div class="reveal">
-        <span class="section-eyebrow" data-es="Mi Historia" data-en="My Story">Mi Historia</span>
+        <span class="section-eyebrow">Mi Historia</span>
         <h2 class="section-title">
-          <span data-es="Yo también he estado donde tú estás." data-en="I've been exactly where you are.">Yo también he estado donde tú estás.</span>
-          <span class="en" data-es-only>I've been exactly where you are.</span>
-        </h2>
+          <span>Yo también he estado donde tú estás.</span>
+                  </h2>
         <div class="about-text">
-          <p data-es="Recuerdo la primera vez. Sala de espera. Luces blancas. Mi hija de tres años — sin palabras, sin mirar a nadie — y yo, intentando sonreír como si entendiera lo que estaba pasando." data-en="I remember the first time. Waiting room. White lights. My three-year-old — no words, not looking at anyone — and me, trying to smile like I understood what was happening.">Recuerdo la primera vez. Sala de espera. Luces blancas. Mi hija de tres años — sin palabras, sin mirar a nadie — y yo, intentando sonreír como si entendiera lo que estaba pasando.</p>
+          <p>Recuerdo la primera vez. Sala de espera. Luces blancas. Mi hija de tres años — sin palabras, sin mirar a nadie — y yo, intentando sonreír como si entendiera lo que estaba pasando.</p>
 
-          <p data-es="Dos años después, lo viví otra vez. Misma sala. Mismo diagnóstico. Esta vez fue mi hija menor. Dos niñas no verbales. Una sola mamá tratando de no romperse." data-en="Two years later, I lived it again. Same room. Same diagnosis. This time it was my younger daughter. Two non-verbal girls. One mom trying not to break.">Dos años después, lo viví otra vez. Misma sala. Mismo diagnóstico. Esta vez fue mi hija menor. Dos niñas no verbales. Una sola mamá tratando de no romperse.</p>
+          <p>Dos años después, lo viví otra vez. Misma sala. Mismo diagnóstico. Esta vez fue mi hija menor. Dos niñas no verbales. Una sola mamá tratando de no romperse.</p>
 
-          <p data-es="Los siguientes diez años los pasé en salas como esas — ya no como la mamá perdida. Como la mamá que tomaba notas. La terapeuta hablaba con mi hija, y yo escribía. La patóloga del habla introducía una tarjeta, y yo aprendía a usarla. La educadora especial armaba una rutina, y yo la repetía en casa esa noche." data-en="The next ten years I spent in rooms like those — no longer as the mom who was lost. As the mom who took notes. The therapist would speak to my daughter, and I'd write it down. The speech pathologist would introduce a card, and I'd learn how to use it. The special educator would build a routine, and I'd run it at home that night.">Los siguientes diez años los pasé en salas como esas — ya no como la mamá perdida. Como la mamá que tomaba notas. La terapeuta hablaba con mi hija, y yo escribía. La patóloga del habla introducía una tarjeta, y yo aprendía a usarla. La educadora especial armaba una rutina, y yo la repetía en casa esa noche.</p>
+          <p>Los siguientes diez años los pasé en salas como esas — ya no como la mamá perdida. Como la mamá que tomaba notas. La terapeuta hablaba con mi hija, y yo escribía. La patóloga del habla introducía una tarjeta, y yo aprendía a usarla. La educadora especial armaba una rutina, y yo la repetía en casa esa noche.</p>
 
-          <p data-es="Así aprendí First & Then. Así aprendí las rutinas visuales. Así aprendí los sistemas de tokens. No de un libro — de los especialistas que cada semana entrenaban a mis hijas, y sin saberlo, también me entrenaban a mí." data-en="That's how I learned First & Then. That's how I learned visual schedules. That's how I learned token systems. Not from a book — from the specialists who, week after week, trained my daughters, and without knowing it, trained me too.">Así aprendí First &amp; Then. Así aprendí las rutinas visuales. Así aprendí los sistemas de tokens. No de un libro — de los especialistas que cada semana entrenaban a mis hijas, y sin saberlo, también me entrenaban a mí.</p>
+          <p>Así aprendí First &amp; Then. Así aprendí las rutinas visuales. Así aprendí los sistemas de tokens. No de un libro — de los especialistas que cada semana entrenaban a mis hijas, y sin saberlo, también me entrenaban a mí.</p>
 
-          <p data-es="Hoy quiero darte lo que a mí me costó una década aprender — en español, desde la mesa de mi cocina, de mamá a mamá. No estás sola en esto. Y no tienes que esperar otros diez años para empezar." data-en="Today I want to give you what took me a decade to learn — in Spanish, from my kitchen table, mom to mom. You are not alone in this. And you don't have to wait another ten years to start." data-en-html="Today I want to give you what took me a decade to learn — in Spanish, from my kitchen table, mom to mom. <strong>You are not alone in this. And you don't have to wait another ten years to start.</strong>">Hoy quiero darte lo que a mí me costó una década aprender — en español, desde la mesa de mi cocina, de mamá a mamá. <strong>No estás sola en esto. Y no tienes que esperar otros diez años para empezar.</strong></p>
+          <p>Hoy quiero darte lo que a mí me costó una década aprender — en español, desde la mesa de mi cocina, de mamá a mamá. <strong>No estás sola en esto. Y no tienes que esperar otros diez años para empezar.</strong></p>
 
-          <p class="en" data-es-only>I've been exactly where you are. Two non-verbal daughters. Ten years alongside the specialists who trained them — and trained me. Today I share it all, mom to mom.</p>
-        </div>
+                  </div>
         <div class="about-sig">
           Julie Fonseca
-          <small data-es="Mamá · Mentora · Autismo No Verbal" data-en="Mom · Mentor · Non-verbal Autism">Mamá · Mentora · Autismo No Verbal</small>
+          <small>Mamá · Mentora · Autismo No Verbal</small>
         </div>
         <div class="about-stats">
           <div class="about-stat">
             <div class="num">2</div>
-            <div class="lbl" data-es="Hijas con autismo no verbal" data-en="Non-verbal autistic daughters">Hijas con autismo no verbal</div>
+            <div class="lbl">Hijas con autismo no verbal</div>
           </div>
           <div class="about-stat">
             <div class="num">10+</div>
-            <div class="lbl" data-es="Años aprendiendo de especialistas" data-en="Years learning from specialists">Años aprendiendo de especialistas</div>
+            <div class="lbl">Años aprendiendo de especialistas</div>
           </div>
           <div class="about-stat">
             <div class="num">1:1</div>
-            <div class="lbl" data-es="Sesiones personalizadas" data-en="Personalized sessions">Sesiones personalizadas</div>
+            <div class="lbl">Sesiones personalizadas</div>
           </div>
         </div>
       </div>
@@ -1555,35 +1437,31 @@
 <section class="section problem">
   <div class="container">
     <div class="center reveal">
-      <span class="section-eyebrow" data-es="Si esto te suena…" data-en="If this sounds familiar…">Si esto te suena…</span>
+      <span class="section-eyebrow">Si esto te suena…</span>
       <h2 class="section-title">
-        <span data-es="No es tu culpa. No estás solo/a." data-en="It's not your fault. You are not alone.">No es tu culpa. No estás solo/a.</span>
-        <span class="en" data-es-only>It's not your fault. You are not alone.</span>
-      </h2>
+        <span>No es tu culpa. No estás solo/a.</span>
+              </h2>
       <p class="section-intro">
-        <span data-es="Si te identificas con una sola de estas situaciones, este espacio es para ti." data-en="If even one of these resonates, this space was made for you.">Si te identificas con una sola de estas situaciones, este espacio es para ti.</span>
+        <span>Si te identificas con una sola de estas situaciones, este espacio es para ti.</span>
       </p>
     </div>
 
     <div class="problem-grid">
       <div class="problem-card reveal">
         <div class="problem-num">01</div>
-        <h3 data-es="Te sientes perdido/a después del diagnóstico" data-en="Overwhelmed after the diagnosis">Te sientes perdido/a después del diagnóstico</h3>
-        <p data-es="Te entregaron un papel y un nombre, pero nadie te explicó qué hacer mañana cuando despiertes con tu hijo." data-en="They handed you a paper and a diagnosis — but no one told you what to do tomorrow morning.">Te entregaron un papel y un nombre, pero nadie te explicó qué hacer mañana cuando despiertes con tu hijo.</p>
-        <p class="en" data-es-only>Overwhelmed after the diagnosis.</p>
-      </div>
+        <h3>Te sientes perdido/a después del diagnóstico</h3>
+        <p>Te entregaron un papel y un nombre, pero nadie te explicó qué hacer mañana cuando despiertes con tu hijo.</p>
+              </div>
       <div class="problem-card reveal">
         <div class="problem-num">02</div>
-        <h3 data-es="Los terapeutas no te explican qué hacer en casa" data-en="Therapists don't tell you what to do at home">Los terapeutas no te explican qué hacer en casa</h3>
-        <p data-es="Las sesiones terminan, la puerta se cierra, y vuelves a casa sin saber cómo aplicar lo que hicieron en la clínica." data-en="The session ends, the door closes — and you go home with no idea how to apply any of it.">Las sesiones terminan, la puerta se cierra, y vuelves a casa sin saber cómo aplicar lo que hicieron en la clínica.</p>
-        <p class="en" data-es-only>Therapists don't tell you what to do at home.</p>
-      </div>
+        <h3>Los terapeutas no te explican qué hacer en casa</h3>
+        <p>Las sesiones terminan, la puerta se cierra, y vuelves a casa sin saber cómo aplicar lo que hicieron en la clínica.</p>
+              </div>
       <div class="problem-card reveal">
         <div class="problem-num">03</div>
-        <h3 data-es="Su crisis te rompe el corazón cada día" data-en="Meltdowns feel uncontrollable">Su crisis te rompe el corazón cada día</h3>
-        <p data-es="Los meltdowns parecen impredecibles, agotadores, y dejas de salir de casa por miedo a una próxima crisis." data-en="Meltdowns feel unpredictable and exhausting — and you've stopped leaving the house because of them.">Los meltdowns parecen impredecibles, agotadores, y dejas de salir de casa por miedo a una próxima crisis.</p>
-        <p class="en" data-es-only>Meltdowns feel uncontrollable.</p>
-      </div>
+        <h3>Su crisis te rompe el corazón cada día</h3>
+        <p>Los meltdowns parecen impredecibles, agotadores, y dejas de salir de casa por miedo a una próxima crisis.</p>
+              </div>
     </div>
   </div>
 </section>
@@ -1592,13 +1470,12 @@
 <section class="section method" id="method">
   <div class="container">
     <div class="center reveal">
-      <span class="section-eyebrow" data-es="Temas de las Sesiones" data-en="Session Topics">Temas de las Sesiones</span>
+      <span class="section-eyebrow">Temas de las Sesiones</span>
       <h2 class="section-title">
-        <span data-es="Elige el tema que tu hijo necesita hoy." data-en="Choose the topic your child needs today.">Elige el tema que tu hijo necesita hoy.</span>
-        <span class="en" data-es-only>Choose the topic your child needs today.</span>
-      </h2>
+        <span>Elige el tema que tu hijo necesita hoy.</span>
+              </h2>
       <p class="section-intro">
-        <span data-es="Cada sesión cubre un solo tema y un apoyo visual específico. No tienes que tomarlas todas — empieza por la que tu familia necesita ahora." data-en="Each session covers a single topic and one specific visual support. You don't have to take them all — start with the one your family needs now.">Cada sesión cubre un solo tema y un apoyo visual específico. No tienes que tomarlas todas — empieza por la que tu familia necesita ahora.</span>
+        <span>Cada sesión cubre un solo tema y un apoyo visual específico. No tienes que tomarlas todas — empieza por la que tu familia necesita ahora.</span>
       </p>
     </div>
 
@@ -1609,9 +1486,8 @@
         </div>
         <div>
           <h3>First &amp; Then</h3>
-          <p data-es="Primero y Después. El apoyo visual más simple y poderoso para enseñar transiciones: primero lo que toca hacer, después lo que tu hijo desea. Reduce frustración y crisis de manera inmediata." data-en="The simplest and most powerful visual support for teaching transitions: first what needs to happen, then what your child wants. Reduces frustration and meltdowns immediately.">Primero y Después. El apoyo visual más simple y poderoso para enseñar transiciones: primero lo que toca hacer, después lo que tu hijo desea. Reduce frustración y crisis de manera inmediata.</p>
-          <p class="en" data-es-only>First, the task. Then, the reward. The simplest visual that changes everything.</p>
-        </div>
+          <p>Primero y Después. El apoyo visual más simple y poderoso para enseñar transiciones: primero lo que toca hacer, después lo que tu hijo desea. Reduce frustración y crisis de manera inmediata.</p>
+                  </div>
       </div>
 
       <div class="pillar reveal">
@@ -1620,9 +1496,8 @@
         </div>
         <div>
           <h3>Visual Schedule</h3>
-          <p data-es="Rutina Visual. El día entero de tu hijo en imágenes — del desayuno a la hora de dormir. Le da estructura, predictibilidad y autonomía. Aprende a armarla, ajustarla y mantenerla viva en casa." data-en="Your child's entire day in images — from breakfast to bedtime. Provides structure, predictability and autonomy. Learn to build it, adjust it, and keep it alive at home.">Rutina Visual. El día entero de tu hijo en imágenes — del desayuno a la hora de dormir. Le da estructura, predictibilidad y autonomía. Aprende a armarla, ajustarla y mantenerla viva en casa.</p>
-          <p class="en" data-es-only>Your child's day, in pictures. Structure that finally sticks.</p>
-        </div>
+          <p>Rutina Visual. El día entero de tu hijo en imágenes — del desayuno a la hora de dormir. Le da estructura, predictibilidad y autonomía. Aprende a armarla, ajustarla y mantenerla viva en casa.</p>
+                  </div>
       </div>
 
       <div class="pillar reveal">
@@ -1631,9 +1506,8 @@
         </div>
         <div>
           <h3>Token System</h3>
-          <p data-es="Sistema de Recompensas. Cómo motivar comportamientos positivos con un sistema visual de fichas — sin sobornos, sin gritos, sin agotamiento. Una herramienta concreta que tu hijo entiende incluso si no habla." data-en="How to motivate positive behaviors with a visual token system — no bribes, no yelling, no exhaustion. A concrete tool your child understands even if they don't speak.">Sistema de Recompensas. Cómo motivar comportamientos positivos con un sistema visual de fichas — sin sobornos, sin gritos, sin agotamiento. Una herramienta concreta que tu hijo entiende incluso si no habla.</p>
-          <p class="en" data-es-only>Visual rewards. No bribes. Works even with non-verbal kids.</p>
-        </div>
+          <p>Sistema de Recompensas. Cómo motivar comportamientos positivos con un sistema visual de fichas — sin sobornos, sin gritos, sin agotamiento. Una herramienta concreta que tu hijo entiende incluso si no habla.</p>
+                  </div>
       </div>
 
       <div class="pillar reveal">
@@ -1641,16 +1515,15 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         </div>
         <div>
-          <h3 data-es="Apoyos Visuales Funcionales" data-en="Functional Visual Supports">Apoyos Visuales Funcionales</h3>
-          <p data-es="Vocabulario visual, tableros de comunicación, tarjetas de elecciones y más. Cómo introducirlos, prepararlos, e implementarlos para que tu hijo se exprese — incluso sin palabras." data-en="Visual vocabulary, communication boards, choice cards and more. How to introduce them, prepare them, and implement them so your child can express themselves — even without words.">Vocabulario visual, tableros de comunicación, tarjetas de elecciones y más. Cómo introducirlos, prepararlos, e implementarlos para que tu hijo se exprese — incluso sin palabras.</p>
-          <p class="en" data-es-only>Communication boards, choice cards, visual vocabulary — even without speech.</p>
-        </div>
+          <h3>Apoyos Visuales Funcionales</h3>
+          <p>Vocabulario visual, tableros de comunicación, tarjetas de elecciones y más. Cómo introducirlos, prepararlos, e implementarlos para que tu hijo se exprese — incluso sin palabras.</p>
+                  </div>
       </div>
     </div>
 
     <div class="center reveal" style="margin-top: 56px;">
       <p style="font-family:'Playfair Display',serif; font-style:italic; color:var(--charcoal-soft); font-size:18px; max-width:620px; margin: 0 auto;">
-        <span data-es="«Cada sesión te explico paso a paso cómo implementar la estrategia en casa, con ideas reales y adaptadas a tu situación.»" data-en="«In each session I explain step by step how to implement the strategy at home, with real ideas adapted to your situation.»">«Cada sesión te explico paso a paso cómo implementar la estrategia en casa, con ideas reales y adaptadas a tu situación.»</span>
+        <span>«Cada sesión te explico paso a paso cómo implementar la estrategia en casa, con ideas reales y adaptadas a tu situación.»</span>
         <br>
         <span style="display:inline-block; margin-top:10px; font-family:'Inter',sans-serif; font-style:normal; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--terracotta); font-weight:700;">— Julie</span>
       </p>
@@ -1663,32 +1536,31 @@
   <div class="container">
     <div class="proof-grid">
       <div>
-        <span class="section-eyebrow reveal" data-es="Testimonios reales" data-en="Real Stories">Testimonios reales</span>
+        <span class="section-eyebrow reveal">Testimonios reales</span>
         <h2 class="section-title reveal">
-          <span data-es="Familias que ya respiran." data-en="Families who finally breathe.">Familias que ya respiran.</span>
-          <span class="en" data-es-only>Families who finally breathe.</span>
-        </h2>
+          <span>Familias que ya respiran.</span>
+                  </h2>
         <p class="section-intro reveal" style="margin-bottom: 36px;">
-          <span data-es="No prometemos milagros — prometemos un camino. Estas familias lo caminaron." data-en="We don't promise miracles — we promise a path. These families walked it.">No prometemos milagros — prometemos un camino. Estas familias lo caminaron.</span>
+          <span>No prometemos milagros — prometemos un camino. Estas familias lo caminaron.</span>
         </p>
 
         <div class="testimonials">
           <div class="testimonial reveal">
-            <div class="testimonial-label"><span class="stars">★★★★★</span> <span data-es="Testimonio" data-en="Testimonial">Testimonio</span></div>
-            <p data-es="«Tomé la sesión de First & Then y al día siguiente lo apliqué con mi hijo. Por primera vez en meses entendió lo que le pedía. Lloré viendo cómo me señalaba la imagen.»" data-en="«I took the First & Then session and applied it with my son the next day. For the first time in months he understood what I was asking. I cried watching him point to the picture.»">«Tomé la sesión de First & Then y al día siguiente lo apliqué con mi hijo. Por primera vez en meses entendió lo que le pedía. Lloré viendo cómo me señalaba la imagen.»</p>
-            <cite>María R. — <span data-es="Mamá de niño no verbal, Miami FL" data-en="Mom of non-verbal child, Miami FL">Mamá de niño no verbal, Miami FL</span></cite>
+            <div class="testimonial-label"><span class="stars">★★★★★</span> <span>Testimonio</span></div>
+            <p>«Tomé la sesión de First & Then y al día siguiente lo apliqué con mi hijo. Por primera vez en meses entendió lo que le pedía. Lloré viendo cómo me señalaba la imagen.»</p>
+            <cite>María R. — <span>Mamá de niño no verbal, Miami FL</span></cite>
           </div>
 
           <div class="testimonial reveal">
-            <div class="testimonial-label"><span class="stars">★★★★★</span> <span data-es="Testimonio" data-en="Testimonial">Testimonio</span></div>
-            <p data-es="«La rutina visual que armamos con Julie cambió nuestras mañanas. Antes eran un caos diario; ahora mi hija sabe qué viene primero, qué viene después, y sale a la escuela tranquila.»" data-en="«The visual schedule we built with Julie changed our mornings. Before it was daily chaos; now my daughter knows what's first, what's next, and she leaves for school calm.»">«La rutina visual que armamos con Julie cambió nuestras mañanas. Antes eran un caos diario; ahora mi hija sabe qué viene primero, qué viene después, y sale a la escuela tranquila.»</p>
-            <cite>Carla M. — <span data-es="Mamá, San Juan PR" data-en="Mom, San Juan PR">Mamá, San Juan PR</span></cite>
+            <div class="testimonial-label"><span class="stars">★★★★★</span> <span>Testimonio</span></div>
+            <p>«La rutina visual que armamos con Julie cambió nuestras mañanas. Antes eran un caos diario; ahora mi hija sabe qué viene primero, qué viene después, y sale a la escuela tranquila.»</p>
+            <cite>Carla M. — <span>Mamá, San Juan PR</span></cite>
           </div>
 
           <div class="testimonial reveal">
-            <div class="testimonial-label"><span class="stars">★★★★★</span> <span data-es="Testimonio" data-en="Testimonial">Testimonio</span></div>
-            <p data-es="«Julie no solo me enseñó las estrategias — me preparó un paquete de materiales personalizado para mi hija. Llegó listo para usar y eso me ahorró semanas. Vale cada peso.»" data-en="«Julie didn't just teach me the strategies — she prepared a personalized materials kit for my daughter. It arrived ready to use and saved me weeks. Worth every dollar.»">«Julie no solo me enseñó las estrategias — me preparó un paquete de materiales personalizado para mi hija. Llegó listo para usar y eso me ahorró semanas. Vale cada peso.»</p>
-            <cite>Lucía R. — <span data-es="Mamá, Nueva York NY" data-en="Mom, New York NY">Mamá, Nueva York NY</span></cite>
+            <div class="testimonial-label"><span class="stars">★★★★★</span> <span>Testimonio</span></div>
+            <p>«Julie no solo me enseñó las estrategias — me preparó un paquete de materiales personalizado para mi hija. Llegó listo para usar y eso me ahorró semanas. Vale cada peso.»</p>
+            <cite>Lucía R. — <span>Mamá, Nueva York NY</span></cite>
           </div>
         </div>
       </div>
@@ -1696,8 +1568,8 @@
       <div class="results-image reveal">
         <img src="public/images/results_image.jpg" alt="Madre e hija reconectadas — resultados reales del Método Fonseca" />
         <div class="results-quote">
-          <strong data-es="El día que la abracé sin miedo" data-en="The day I held her without fear">El día que la abracé sin miedo</strong>
-          <span data-es="«Pasamos de sobrevivir a vivir.»" data-en="«We went from surviving to living.»">«Pasamos de sobrevivir a vivir.»</span>
+          <strong>El día que la abracé sin miedo</strong>
+          <span>«Pasamos de sobrevivir a vivir.»</span>
         </div>
       </div>
     </div>
@@ -1708,59 +1580,55 @@
 <section class="section services" id="services">
   <div class="container">
     <div class="center reveal">
-      <span class="section-eyebrow" data-es="Cómo Trabajamos Juntos" data-en="How We Work Together">Cómo Trabajamos Juntos</span>
+      <span class="section-eyebrow">Cómo Trabajamos Juntos</span>
       <h2 class="section-title">
-        <span data-es="Sesiones, materiales y paquetes personalizados." data-en="Sessions, materials, and personalized kits.">Sesiones, materiales y paquetes personalizados.</span>
-        <span class="en" data-es-only>Sessions, materials, and personalized kits.</span>
-      </h2>
+        <span>Sesiones, materiales y paquetes personalizados.</span>
+              </h2>
       <p class="section-intro">
-        <span data-es="Tomas solo lo que necesitas. Empieza por una sesión, llévate materiales listos, o pide un paquete diseñado específicamente para tu hijo." data-en="Take only what you need. Start with a single session, get ready-made materials, or order a kit designed specifically for your child.">Tomas solo lo que necesitas. Empieza por una sesión, llévate materiales listos, o pide un paquete diseñado específicamente para tu hijo.</span>
+        <span>Tomas solo lo que necesitas. Empieza por una sesión, llévate materiales listos, o pide un paquete diseñado específicamente para tu hijo.</span>
       </p>
     </div>
 
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-tag" data-es="Sesión 1:1" data-en="1:1 Session">Sesión 1:1</div>
-        <h3 data-es="Sesión por Tema" data-en="Topic-Based Session">Sesión por Tema</h3>
-        <div class="en-sub" data-es-only>One topic. One visual support. Step by step.</div>
-        <ul>
-          <li data-es="Elige un tema: First & Then, Visual Schedule, Token System u otro apoyo visual" data-en="Pick a topic: First & Then, Visual Schedule, Token System or another visual support">Elige un tema: First &amp; Then, Visual Schedule, Token System u otro apoyo visual</li>
-          <li data-es="Paso a paso adaptado a tu hijo y a tu casa" data-en="Step by step adapted to your child and your home">Paso a paso adaptado a tu hijo y a tu casa</li>
-          <li data-es="En español, vía videollamada" data-en="In Spanish, by video call">En español, vía videollamada</li>
-          <li data-es="Sin compromiso — toma solo las que necesitas" data-en="No commitment — take only the ones you need">Sin compromiso — toma solo las que necesitas</li>
+        <div class="service-tag">Sesión 1:1</div>
+        <h3>Sesión por Tema</h3>
+                <ul>
+          <li>Elige un tema: First &amp; Then, Visual Schedule, Token System u otro apoyo visual</li>
+          <li>Paso a paso adaptado a tu hijo y a tu casa</li>
+          <li>En español, vía videollamada</li>
+          <li>Sin compromiso — toma solo las que necesitas</li>
         </ul>
         <a href="#contact" class="service-link">
-          <span data-es="Reservar sesión →" data-en="Book session →">Reservar sesión →</span>
+          <span>Reservar sesión →</span>
         </a>
       </div>
 
       <div class="service-card reveal">
-        <div class="service-tag" data-es="Listos para Usar" data-en="Ready to Use">Listos para Usar</div>
-        <h3 data-es="Materiales Visuales" data-en="Visual Materials">Materiales Visuales</h3>
-        <div class="en-sub" data-es-only>Done-for-you visual supports</div>
-        <ul>
-          <li data-es="Tarjetas First & Then impresas" data-en="Printed First & Then cards">Tarjetas First &amp; Then impresas</li>
-          <li data-es="Rutinas visuales completas" data-en="Complete visual schedules">Rutinas visuales completas</li>
-          <li data-es="Tableros de tokens" data-en="Token boards">Tableros de tokens</li>
-          <li data-es="Vocabulario visual y tarjetas de elección" data-en="Visual vocabulary and choice cards">Vocabulario visual y tarjetas de elección</li>
+        <div class="service-tag">Listos para Usar</div>
+        <h3>Materiales Visuales</h3>
+                <ul>
+          <li>Tarjetas First &amp; Then impresas</li>
+          <li>Rutinas visuales completas</li>
+          <li>Tableros de tokens</li>
+          <li>Vocabulario visual y tarjetas de elección</li>
         </ul>
         <a href="#contact" class="service-link">
-          <span data-es="Ver materiales →" data-en="See materials →">Ver materiales →</span>
+          <span>Ver materiales →</span>
         </a>
       </div>
 
       <div class="service-card reveal">
-        <div class="service-tag" data-es="Hecho a la Medida" data-en="Custom Made">Hecho a la Medida</div>
-        <h3 data-es="Paquete Personalizado" data-en="Personalized Kit">Paquete Personalizado</h3>
-        <div class="en-sub" data-es-only>Built around your child</div>
-        <ul>
-          <li data-es="Diseñado específicamente para tu hijo" data-en="Designed specifically for your child">Diseñado específicamente para tu hijo</li>
-          <li data-es="Apoyos visuales con sus rutinas, sus intereses, su lenguaje" data-en="Visual supports with their routines, their interests, their language">Apoyos visuales con sus rutinas, sus intereses, su lenguaje</li>
-          <li data-es="Sesión incluida para enseñarte a usarlo" data-en="Session included to teach you to use it">Sesión incluida para enseñarte a usarlo</li>
-          <li data-es="Listo para implementar desde el día uno" data-en="Ready to implement from day one">Listo para implementar desde el día uno</li>
+        <div class="service-tag">Hecho a la Medida</div>
+        <h3>Paquete Personalizado</h3>
+                <ul>
+          <li>Diseñado específicamente para tu hijo</li>
+          <li>Apoyos visuales con sus rutinas, sus intereses, su lenguaje</li>
+          <li>Sesión incluida para enseñarte a usarlo</li>
+          <li>Listo para implementar desde el día uno</li>
         </ul>
         <a href="#contact" class="service-link">
-          <span data-es="Solicitar paquete →" data-en="Request kit →">Solicitar paquete →</span>
+          <span>Solicitar paquete →</span>
         </a>
       </div>
     </div>
@@ -1769,7 +1637,7 @@
       <span class="services-note-icon" aria-hidden="true">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
       </span>
-      <span data-es="Sesiones, materiales y cursos basados en mi experiencia como mamá y en lo aprendido junto a especialistas. No son servicios clínicos ni terapia." data-en="Sessions, materials and courses based on my experience as a mom and what I've learned alongside specialists. These are not clinical services or therapy.">Sesiones, materiales y cursos basados en mi experiencia como mamá y en lo aprendido junto a especialistas. No son servicios clínicos ni terapia.</span>
+      <span>Sesiones, materiales y cursos basados en mi experiencia como mamá y en lo aprendido junto a especialistas. No son servicios clínicos ni terapia.</span>
     </div>
   </div>
 </section>
@@ -1778,13 +1646,12 @@
 <section class="shop" id="shop">
   <div class="container">
     <div class="center reveal">
-      <span class="section-eyebrow" data-es="Aprende a tu Ritmo" data-en="Learn at Your Own Pace">Aprende a tu Ritmo</span>
+      <span class="section-eyebrow">Aprende a tu Ritmo</span>
       <h2 class="section-title">
-        <span data-es="Ebooks y cursos para padres ocupados." data-en="Ebooks and courses for busy parents.">Ebooks y cursos para padres ocupados.</span>
-        <span class="en" data-es-only>Ebooks and online courses for busy parents.</span>
-      </h2>
+        <span>Ebooks y cursos para padres ocupados.</span>
+              </h2>
       <p class="section-intro">
-        <span data-es="No siempre puedes tomar una sesión 1:1. Para esos momentos, te dejo el método en formato ebook y curso en video — para que aprendas cuando tu hijo duerma, en español, paso a paso." data-en="You can't always take a 1:1 session. For those moments, I've packaged the method as ebooks and video courses — so you can learn when your child sleeps, in Spanish, step by step.">No siempre puedes tomar una sesión 1:1. Para esos momentos, te dejo el método en formato ebook y curso en video — para que aprendas cuando tu hijo duerma, en español, paso a paso.</span>
+        <span>No siempre puedes tomar una sesión 1:1. Para esos momentos, te dejo el método en formato ebook y curso en video — para que aprendas cuando tu hijo duerma, en español, paso a paso.</span>
       </p>
     </div>
 
@@ -1792,33 +1659,32 @@
 
       <!-- EBOOK 1: First & Then -->
       <div class="shop-card reveal">
-        <span class="badge new" data-es="Más Vendido" data-en="Best Seller">Más Vendido</span>
+        <span class="badge new">Más Vendido</span>
         <div class="shop-cover">
           <div class="shop-cover-inner">
             <span class="shop-cover-kicker">Ebook · PDF</span>
             <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h6M9 11h6"/></svg>
-            <div class="shop-cover-title" data-es="First &amp; Then" data-en="First &amp; Then">First &amp; Then</div>
+            <div class="shop-cover-title">First &amp; Then</div>
           </div>
         </div>
         <div class="shop-body">
-          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Ebook Digital" data-en="Digital Ebook">Ebook Digital</span></div>
-          <h3 data-es="Guía Completa: Primero y Después" data-en="The Complete First & Then Guide">Guía Completa: Primero y Después</h3>
-          <div class="en-sub" data-es-only>The Complete First &amp; Then Guide</div>
-          <p data-es="48 páginas con ejemplos reales, tarjetas imprimibles listas para recortar, y guion paso a paso para introducir First & Then desde hoy." data-en="48 pages with real examples, ready-to-print cut-out cards, and a step-by-step script to introduce First & Then starting today.">48 páginas con ejemplos reales, tarjetas imprimibles listas para recortar, y guion paso a paso para introducir First &amp; Then desde hoy.</p>
+          <div class="shop-tag"><span class="tag-dot"></span><span>Ebook Digital</span></div>
+          <h3>Guía Completa: Primero y Después</h3>
+                    <p>48 páginas con ejemplos reales, tarjetas imprimibles listas para recortar, y guion paso a paso para introducir First &amp; Then desde hoy.</p>
           <div class="shop-meta">
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              <span data-es="48 páginas" data-en="48 pages">48 páginas</span>
+              <span>48 páginas</span>
             </span>
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span data-es="Acceso inmediato" data-en="Instant access">Acceso inmediato</span>
+              <span>Acceso inmediato</span>
             </span>
           </div>
           <div class="shop-footer">
             <div class="shop-price"><span class="currency">$</span>17</div>
             <a href="mailto:doubleautismlovecreations@gmail.com?subject=Ebook%20First%20%26%20Then" class="shop-cta">
-              <span data-es="Comprar" data-en="Buy">Comprar</span>
+              <span>Comprar</span>
               <span>→</span>
             </a>
           </div>
@@ -1827,33 +1693,32 @@
 
       <!-- COURSE 1: Visual Schedule -->
       <div class="shop-card reveal">
-        <span class="badge" data-es="Curso en Video" data-en="Video Course">Curso en Video</span>
+        <span class="badge">Curso en Video</span>
         <div class="shop-cover">
           <div class="shop-cover-inner">
-            <span class="shop-cover-kicker" data-es="Curso · Video" data-en="Course · Video">Curso · Video</span>
+            <span class="shop-cover-kicker">Curso · Video</span>
             <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
             <div class="shop-cover-title">Visual Schedule Masterclass</div>
           </div>
         </div>
         <div class="shop-body">
-          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Curso Online" data-en="Online Course">Curso Online</span></div>
-          <h3 data-es="Rutinas Visuales: Curso Completo" data-en="Visual Schedules: Full Course">Rutinas Visuales: Curso Completo</h3>
-          <div class="en-sub" data-es-only>Visual Schedules: Full Video Course</div>
-          <p data-es="6 lecciones en video, plantillas descargables, y soporte por email durante 30 días. Aprende a armar la rutina visual perfecta para tu hijo." data-en="6 video lessons, downloadable templates, and 30 days of email support. Learn to build the perfect visual schedule for your child.">6 lecciones en video, plantillas descargables, y soporte por email durante 30 días. Aprende a armar la rutina visual perfecta para tu hijo.</p>
+          <div class="shop-tag"><span class="tag-dot"></span><span>Curso Online</span></div>
+          <h3>Rutinas Visuales: Curso Completo</h3>
+                    <p>6 lecciones en video, plantillas descargables, y soporte por email durante 30 días. Aprende a armar la rutina visual perfecta para tu hijo.</p>
           <div class="shop-meta">
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span data-es="6 lecciones" data-en="6 lessons">6 lecciones</span>
+              <span>6 lecciones</span>
             </span>
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span data-es="~2 hrs" data-en="~2 hrs">~2 hrs</span>
+              <span>~2 hrs</span>
             </span>
           </div>
           <div class="shop-footer">
             <div class="shop-price"><span class="strike">$67</span><span class="currency">$</span>47</div>
             <a href="mailto:doubleautismlovecreations@gmail.com?subject=Curso%20Rutinas%20Visuales" class="shop-cta">
-              <span data-es="Inscribirme" data-en="Enroll">Inscribirme</span>
+              <span>Inscribirme</span>
               <span>→</span>
             </a>
           </div>
@@ -1862,7 +1727,7 @@
 
       <!-- EBOOK 2: Token System -->
       <div class="shop-card reveal">
-        <span class="badge" data-es="Nuevo" data-en="New">Nuevo</span>
+        <span class="badge">Nuevo</span>
         <div class="shop-cover">
           <div class="shop-cover-inner">
             <span class="shop-cover-kicker">Ebook + Material</span>
@@ -1871,24 +1736,23 @@
           </div>
         </div>
         <div class="shop-body">
-          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Ebook + Tableros" data-en="Ebook + Boards">Ebook + Tableros</span></div>
-          <h3 data-es="Sistema de Recompensas Visual" data-en="Visual Token System">Sistema de Recompensas Visual</h3>
-          <div class="en-sub" data-es-only>Visual Token System Guide</div>
-          <p data-es="Ebook + 12 tableros de tokens listos para imprimir, diseñados para distintos comportamientos y edades. Sin sobornos, sin gritos." data-en="Ebook + 12 ready-to-print token boards, designed for different behaviors and ages. No bribes, no yelling.">Ebook + 12 tableros de tokens listos para imprimir, diseñados para distintos comportamientos y edades. Sin sobornos, sin gritos.</p>
+          <div class="shop-tag"><span class="tag-dot"></span><span>Ebook + Tableros</span></div>
+          <h3>Sistema de Recompensas Visual</h3>
+                    <p>Ebook + 12 tableros de tokens listos para imprimir, diseñados para distintos comportamientos y edades. Sin sobornos, sin gritos.</p>
           <div class="shop-meta">
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
-              <span data-es="12 tableros" data-en="12 boards">12 tableros</span>
+              <span>12 tableros</span>
             </span>
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              <span data-es="PDF descargable" data-en="Downloadable PDF">PDF descargable</span>
+              <span>PDF descargable</span>
             </span>
           </div>
           <div class="shop-footer">
             <div class="shop-price"><span class="currency">$</span>24</div>
             <a href="mailto:doubleautismlovecreations@gmail.com?subject=Ebook%20Token%20System" class="shop-cta">
-              <span data-es="Comprar" data-en="Buy">Comprar</span>
+              <span>Comprar</span>
               <span>→</span>
             </a>
           </div>
@@ -1897,33 +1761,32 @@
 
       <!-- COURSE 2: Communication Toolkit -->
       <div class="shop-card reveal">
-        <span class="badge" data-es="Bundle" data-en="Bundle">Bundle</span>
+        <span class="badge">Bundle</span>
         <div class="shop-cover">
           <div class="shop-cover-inner">
-            <span class="shop-cover-kicker" data-es="Curso + Ebooks" data-en="Course + Ebooks">Curso + Ebooks</span>
+            <span class="shop-cover-kicker">Curso + Ebooks</span>
             <svg class="shop-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            <div class="shop-cover-title" data-es="Caja de Comunicación" data-en="Communication Toolkit">Caja de Comunicación</div>
+            <div class="shop-cover-title">Caja de Comunicación</div>
           </div>
         </div>
         <div class="shop-body">
-          <div class="shop-tag"><span class="tag-dot"></span><span data-es="Bundle Completo" data-en="Complete Bundle">Bundle Completo</span></div>
-          <h3 data-es="Toolkit de Comunicación No Verbal" data-en="Non-Verbal Communication Toolkit">Toolkit de Comunicación No Verbal</h3>
-          <div class="en-sub" data-es-only>Non-Verbal Communication Toolkit Bundle</div>
-          <p data-es="Todo el método en un solo paquete: los 3 ebooks + el curso de Rutinas Visuales + tableros de comunicación + vocabulario visual. Ahorra 40%." data-en="The whole method in one bundle: all 3 ebooks + the Visual Schedules course + communication boards + visual vocabulary. Save 40%.">Todo el método en un solo paquete: los 3 ebooks + el curso de Rutinas Visuales + tableros de comunicación + vocabulario visual. Ahorra 40%.</p>
+          <div class="shop-tag"><span class="tag-dot"></span><span>Bundle Completo</span></div>
+          <h3>Toolkit de Comunicación No Verbal</h3>
+                    <p>Todo el método en un solo paquete: los 3 ebooks + el curso de Rutinas Visuales + tableros de comunicación + vocabulario visual. Ahorra 40%.</p>
           <div class="shop-meta">
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L12 3 4 7l8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
-              <span data-es="Todo incluido" data-en="All included">Todo incluido</span>
+              <span>Todo incluido</span>
             </span>
             <span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-es="Mejor precio" data-en="Best value">Mejor precio</span>
+              <span>Mejor precio</span>
             </span>
           </div>
           <div class="shop-footer">
             <div class="shop-price"><span class="strike">$155</span><span class="currency">$</span>97</div>
             <a href="mailto:doubleautismlovecreations@gmail.com?subject=Bundle%20Toolkit%20Completo" class="shop-cta">
-              <span data-es="Quiero el Bundle" data-en="Get Bundle">Quiero el Bundle</span>
+              <span>Quiero el Bundle</span>
               <span>→</span>
             </a>
           </div>
@@ -1937,31 +1800,29 @@
 <!-- ─────────── CTA SECTION ─────────── -->
 <section class="cta-section" id="contact">
   <div class="container reveal">
-    <span class="cta-eyebrow" data-es="Empieza por un tema" data-en="Start with one topic">Empieza por un tema</span>
-    <h2 data-es="Tu hijo no necesita más teoría. Necesita una herramienta hoy." data-en="Your child doesn't need more theory. They need one real tool today.">Tu hijo no necesita más teoría. Necesita una herramienta hoy.</h2>
+    <span class="cta-eyebrow">Empieza por un tema</span>
+    <h2>Tu hijo no necesita más teoría. Necesita una herramienta hoy.</h2>
     <p>
-      <span data-es="Reserva una sesión y comienza con un tema específico según la necesidad de tu hijo. Aprenderás a introducir vocabulario con apoyos visuales, preparar e implementar materiales, y aplicar estrategias que aumenten la comunicación y reduzcan la frustración." data-en="Book a session and start with a topic that fits your child's need. You'll learn to introduce vocabulary with visual supports, prepare and implement materials, and apply strategies that increase communication and reduce frustration.">Reserva una sesión y comienza con un tema específico según la necesidad de tu hijo. Aprenderás a introducir vocabulario con apoyos visuales, preparar e implementar materiales, y aplicar estrategias que aumenten la comunicación y reduzcan la frustración.</span>
-      <span class="en" data-es-only>Book one session. Start with one topic. Real tools that work at home.</span>
-    </p>
+      <span>Reserva una sesión y comienza con un tema específico según la necesidad de tu hijo. Aprenderás a introducir vocabulario con apoyos visuales, preparar e implementar materiales, y aplicar estrategias que aumenten la comunicación y reduzcan la frustración.</span>
+          </p>
     <a href="mailto:doubleautismlovecreations@gmail.com?subject=Reserva%20de%20Sesi%C3%B3n%20-%20Julie%20Fonseca&body=Hola%20Julie%2C%20me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n.%20El%20tema%20que%20me%20interesa%20es%3A%20" class="btn">
       <span>
-        <span data-es="Reserva tu Sesión Ahora" data-en="Book Your Session Now">Reserva tu Sesión Ahora</span>
-        <span class="btn-en" data-es-only>Book Your Session Now</span>
-      </span>
+        <span>Reserva tu Sesión Ahora</span>
+              </span>
       <span class="arrow">→</span>
     </a>
     <div class="cta-bullets">
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span data-es="Un solo tema por sesión" data-en="One topic per session">Un solo tema por sesión</span>
+        <span>Un solo tema por sesión</span>
       </span>
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span data-es="En español" data-en="In Spanish">En español</span>
+        <span>En español</span>
       </span>
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span data-es="Práctico y realista" data-en="Practical and realistic">Práctico y realista</span>
+        <span>Práctico y realista</span>
       </span>
     </div>
   </div>
@@ -1971,16 +1832,16 @@
 <footer>
   <div class="container">
     <div class="footer-brand">Julie Fonseca</div>
-    <div class="footer-tag" data-es="Mamá · Mentora · Autismo No Verbal" data-en="Mom · Mentor · Non-verbal Autism">Mamá · Mentora · Autismo No Verbal</div>
+    <div class="footer-tag">Mamá · Mentora · Autismo No Verbal</div>
     <div class="footer-contact">
       <a href="mailto:doubleautismlovecreations@gmail.com">doubleautismlovecreations@gmail.com</a>
     </div>
     <div class="footer-divider"></div>
     <p class="footer-disclaimer">
-      <span data-es="Comparto estas estrategias como mamá de dos hijas con autismo no verbal, basándome en mi experiencia personal y en lo aprendido junto a especialistas certificados. No soy terapeuta ni ofrezco servicios clínicos." data-en="I share these strategies as a mom of two non-verbal autistic daughters, based on my personal experience and what I've learned alongside certified specialists. I am not a therapist and do not offer clinical services.">Comparto estas estrategias como mamá de dos hijas con autismo no verbal, basándome en mi experiencia personal y en lo aprendido junto a especialistas certificados. No soy terapeuta ni ofrezco servicios clínicos.</span>
+      <span>Comparto estas estrategias como mamá de dos hijas con autismo no verbal, basándome en mi experiencia personal y en lo aprendido junto a especialistas certificados. No soy terapeuta ni ofrezco servicios clínicos.</span>
     </p>
     <div class="footer-copy">
-      © 2026 Julie Fonseca — <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span>
+      © 2026 Julie Fonseca — <span>Todos los derechos reservados.</span>
     </div>
   </div>
 </footer>
@@ -2006,42 +1867,6 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // ─── Bilingual system (innerHTML-safe, preserves nested HTML)
-  // body[data-lang="es"] (default) = ES primary + EN italic subtitles in [data-es-only]
-  // body[data-lang="en"] = English only; hides [data-es-only] and shows [data-en-only]
-  const langBtn = document.getElementById('langToggle');
-  const translatable = document.querySelectorAll('[data-en]');
-  // snapshot original ES innerHTML so we can restore exactly (preserves <br>, <strong>, <span>, etc.)
-  translatable.forEach(el => { el.dataset.origHtml = el.innerHTML; });
-
-  function setLang(lang) {
-    document.body.dataset.lang = lang;
-    document.documentElement.setAttribute('lang', lang);
-    if (lang === 'en') {
-      translatable.forEach(el => {
-        const enHtml = el.getAttribute('data-en-html') || el.getAttribute('data-en') || '';
-        el.innerHTML = enHtml;
-      });
-      langBtn.textContent = 'ES';
-    } else {
-      translatable.forEach(el => { el.innerHTML = el.dataset.origHtml; });
-      langBtn.textContent = 'EN';
-    }
-  }
-
-  // CSS-driven visibility for ES-only / EN-only sibling content
-  const langStyle = document.createElement('style');
-  langStyle.textContent = `
-    body[data-lang="en"] [data-es-only] { display: none !important; }
-    body:not([data-lang="en"]) [data-en-only] { display: none !important; }
-  `;
-  document.head.appendChild(langStyle);
-  document.body.dataset.lang = 'es';
-
-  langBtn.addEventListener('click', () => {
-    setLang(document.body.dataset.lang === 'en' ? 'es' : 'en');
-  });
 
   // ─── Smooth scroll for anchor links (already in CSS, but improve focus)
   document.querySelectorAll('a[href^="#"]').forEach(a => {
