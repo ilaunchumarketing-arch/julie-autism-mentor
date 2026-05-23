@@ -138,6 +138,59 @@
     box-shadow: var(--shadow-md);
   }
 
+  /* ───────────── NAV ACTIONS ───────────── */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Custom language toggle (drives Google Translate via cookie) */
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.92);
+    color: var(--sage-dark);
+    border: 1px solid rgba(74, 124, 89, 0.3);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(44,44,44,0.06);
+  }
+  .lang-toggle:hover {
+    background: var(--white);
+    box-shadow: 0 4px 14px rgba(44,44,44,0.1);
+    transform: translateY(-1px);
+  }
+  .lang-toggle .lang-icon { opacity: 0.65; flex-shrink: 0; }
+  .lang-toggle:hover .lang-icon { opacity: 1; }
+
+  /* Hide Google Translate default UI completely */
+  #google_translate_element { display: none !important; visibility: hidden !important; height: 0; width: 0; overflow: hidden; position: absolute; }
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget,
+  .goog-te-balloon-frame,
+  iframe.goog-te-menu-frame,
+  .goog-tooltip,
+  .goog-tooltip:hover,
+  .goog-text-highlight {
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  body { top: 0 !important; }
+  /* Prevent Google's font-size injection */
+  body, body * { font-size: inherit; }
+  font[face] { font-family: inherit !important; }
+
   /* ───────────── HERO (2-col, image visible) ───────────── */
   .hero {
     position: relative;
@@ -1338,10 +1391,21 @@
       Julie Fonseca
       <span class="tag">Mamá · Mentora · Autismo No Verbal</span>
     </a>
-    <a href="#contact" class="nav-cta">
-      <span class="nav-cta-label">Reservar Sesión</span>
-      <span class="nav-cta-short">Reservar</span>
-    </a>
+    <div class="nav-actions">
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Cambiar idioma / Change language">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span class="lang-toggle-label">EN</span>
+      </button>
+      <a href="#contact" class="nav-cta">
+        <span class="nav-cta-label">Reservar Sesión</span>
+        <span class="nav-cta-short">Reservar</span>
+      </a>
+    </div>
+    <div id="google_translate_element" aria-hidden="true"></div>
   </div>
 </nav>
 
@@ -1880,7 +1944,60 @@
       }
     });
   });
+
+  // ─── Google Translate: cookie-driven custom toggle ───
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  window.googleTranslateElementInit = googleTranslateElementInit;
+
+  (function () {
+    const btn = document.getElementById('langToggle');
+    if (!btn) return;
+    const label = btn.querySelector('.lang-toggle-label');
+
+    function currentLang() {
+      const m = document.cookie.match(/googtrans=\/[a-z]+\/([a-z]+)/);
+      return m ? m[1] : 'es';
+    }
+
+    function setLang(lang) {
+      const host = window.location.hostname;
+      const val = '/es/' + lang;
+      // Clear any pre-existing cookies
+      document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      document.cookie = 'googtrans=; path=/; domain=' + host + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      if (host.split('.').length > 1) {
+        document.cookie = 'googtrans=; path=/; domain=.' + host + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      }
+      // Set new cookie at all scopes
+      if (lang === 'en') {
+        document.cookie = 'googtrans=' + val + '; path=/';
+        document.cookie = 'googtrans=' + val + '; path=/; domain=' + host;
+        if (host.split('.').length > 1) {
+          document.cookie = 'googtrans=' + val + '; path=/; domain=.' + host;
+        }
+      }
+      window.location.reload();
+    }
+
+    function updateLabel() {
+      label.textContent = currentLang() === 'en' ? 'ES' : 'EN';
+    }
+
+    btn.addEventListener('click', () => {
+      setLang(currentLang() === 'en' ? 'es' : 'en');
+    });
+
+    updateLabel();
+  })();
 </script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 
 </body>
 </html>
